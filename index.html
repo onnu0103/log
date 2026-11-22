@@ -97,6 +97,7 @@ summary{cursor:pointer;color:var(--sub);min-height:32px}
 .cta a{display:flex;align-items:center;justify-content:center;text-decoration:none;width:100%}
 footer{font-size:13px;color:var(--sub)}
 footer p{margin:0 0 8px}
+footer .links a{color:var(--sub)}
 @media print{
   :root{--bg:#fff;--card:#fff;--ink:#000;--sub:#444;--line:#999;--kraft:#fff;--kraft-ink:#000;--red:#000}
   #form,.tools,#copyBox,#cta,.tap,.warn,.jump,.howto,.revex,footer .screen{display:none!important}
@@ -199,6 +200,7 @@ footer p{margin:0 0 8px}
   <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>
   <p class="screen">iPhoneのSafariでは、1週間ほどこのページを開かないと、記録が消えることがあります。毎日開くなら、ホーム画面に追加しておくと便利です（追加は書き始める前に）。7日分そろったら「メモ用にコピー」で残してください。</p>
   <p>点数は、そのときの気分の記録です。良い・悪いの評価ではありません。</p>
+  <p class="links"><a href="tokushoho.html">特定商取引法に基づく表記</a>　<a href="privacy.html">プライバシーポリシー</a></p>
 </footer>
 </div>
 
@@ -207,7 +209,7 @@ footer p{margin:0 0 8px}
   'use strict';
 
   // ここだけ書きかえます：LINEの友だち追加URL（https:// から始まるもの）を '' の中に入れると、ページの下にLINEの案内が出ます
-  var CONFIG = { lineUrl: '' };
+  var CONFIG = { lineUrl: 'https://lin.ee/xATF3oow' };
 
   var KEY = 'jiyujikan-log-v1';
   var WD = ['日', '月', '火', '水', '木', '金', '土'];
