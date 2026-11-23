@@ -557,7 +557,8 @@ let mode = 'idle', silent = false, tcur = 0, clock0 = 0, dragging = false;
 const last = { si: -1, step: -2, cap: null };
 const mmss = s => { s = Math.max(0, Math.round(s)); return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0'); };
 function goSilent(){
-  if (silent) return; silent = true;
+  if (silent) return;
+  tcur = au.currentTime || tcur; clock0 = performance.now() - tcur * 1000; silent = true;
   vnote.textContent = '音声を読みこめませんでした。字幕で再生します。'; vnote.hidden = false;
   $('#pn').textContent = $('#pn').textContent.replace('音が出ます（字幕つき）', '字幕で再生します');
 }
@@ -595,7 +596,7 @@ async function play(){
   if (mode === 'end') seekTo(0);
   if (!silent) {
     $('#startTx').textContent = '読みこみ中…';
-    try { await au.play(); } catch (e) { goSilent(); }
+    try { await au.play(); } catch (e) { if (e && e.name === 'AbortError') { $('#startTx').textContent = '再生する'; return; } goSilent(); }
     $('#startTx').textContent = '再生する';
   }
   if (silent) clock0 = performance.now() - tcur * 1000;
