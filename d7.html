@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ECD7AA">
+<title>罠その7　比較の罠：上に行くほど、自信がしぼむ｜自由時間の正体</title>
+<meta name="description" content="上手くなるほど、自信がなくなる。それは、実力が足りないからではありません。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="罠その7　比較の罠：上に行くほど、自信がしぼむ">
+<meta property="og:description" content="上手くなるほど、自信がなくなる。それは、実力が足りないからではありません。">
+<meta property="og:url" content="https://onnu0103.github.io/log/d7.html">
+<meta property="og:image" content="https://onnu0103.github.io/log/og-d7.jpg?v=2">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
+<style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
+@media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP",Meiryo,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px calc(36px + env(safe-area-inset-bottom))}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+header{background:var(--kraft);color:var(--kraft-ink);border-radius:20px;padding:18px 18px 16px;margin:0 0 14px}
+.lab{margin:0;font-size:13px;font-weight:700;opacity:.85}
+h1{margin:4px 0 8px;font-size:25px;line-height:1.35;font-weight:900}
+.lead{margin:0;font-size:15px}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(0,0,0,.09);margin:10px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px}
+h2{font-size:18px;margin:0 0 10px;line-height:1.45}
+h3{font-size:15px;margin:14px 0 6px}
+.card p{margin:0 0 10px;font-size:15px}
+.card p:last-child{margin-bottom:0}
+.card a:not(.btn){color:inherit}
+.card ul{margin:0 0 10px;padding-left:1.2em;font-size:15px}
+.src{font-size:12px!important;color:var(--sub)}
+.note{font-size:13px!important;color:var(--sub)}
+.f{display:block;font-weight:700;font-size:14px;margin:0 0 14px}
+.f small{display:block;font-weight:400;color:var(--sub);font-size:13px;margin-top:2px}
+input[type=text],textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:16px;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+textarea{min-height:76px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.chip{font:inherit;font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--chip);color:var(--ink);min-height:40px}
+.chip[aria-pressed=true],.opt[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--on-ink)}
+.q{margin:0 0 16px;padding:0;border:0;min-width:0}
+.q legend{font-weight:700;font-size:15px;margin:0 0 8px;padding:0;line-height:1.55}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.opts.one{grid-template-columns:1fr}
+.opts.three{grid-template-columns:repeat(3,1fr)}
+.opts.three .opt{font-size:13px;padding:8px 4px}
+.opt{font:inherit;font-size:14px;font-weight:700;min-height:48px;padding:8px 10px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);line-height:1.35}
+.prog{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--sub);margin:0 0 8px}
+.track{height:6px;border-radius:3px;background:var(--chip);overflow:hidden;margin:0 0 14px}
+.track b{display:block;height:100%;background:var(--red);transition:width .2s}
+.qtext{font-size:18px!important;font-weight:700;line-height:1.6;min-height:5.2em;margin:0 0 12px!important}
+.link{font:inherit;font-size:14px;background:none;border:0;padding:8px 0;color:var(--sub);text-decoration:underline}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{font:inherit;font-weight:700;font-size:16px;min-height:48px;padding:10px 18px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center}
+.primary{background:var(--ink);color:var(--on-ink);border-color:var(--ink);flex:1}
+.msg{min-height:1.6em;margin:8px 0 0!important;font-size:14px!important;color:var(--sub)}
+.res{border:2px solid var(--ink)}
+.res h2{font-size:21px}
+.todo{background:var(--kraft);color:var(--kraft-ink);border-radius:14px;padding:14px;margin:12px 0}
+.todo b{display:block;font-size:13px;margin-bottom:4px}
+.todo p{margin:0!important;font-size:16px!important;font-weight:700;line-height:1.65;white-space:pre-wrap}
+.bars{margin:12px 0}
+.bar{display:grid;grid-template-columns:8.5em 1fr 2.4em;gap:8px;align-items:center;font-size:13px;margin:0 0 6px}
+.bar i{display:block;height:10px;border-radius:5px;background:var(--chip);overflow:hidden}
+.bar i b{display:block;height:100%;background:var(--sub);border-radius:5px}
+.bar.top i b{background:var(--red)}
+.bar.top span:first-child{font-weight:700}
+.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.rowx{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.rowx:first-child{border-top:0}
+.kind{font:inherit;font-size:12px;font-weight:700;min-height:38px;min-width:54px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--sub)}
+.kind[data-k=a]{background:var(--red);border-color:var(--red);color:#fff}
+.stp{display:flex;align-items:center;gap:4px}
+.stp button{font:inherit;font-size:20px;font-weight:700;width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);line-height:1}
+.stp output{min-width:3.4em;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.big{font-size:32px!important;font-weight:900;line-height:1.25;margin:4px 0!important}
+.big small{font-size:15px;font-weight:700;margin-left:4px}
+.meter{height:16px;border-radius:8px;background:var(--chip);overflow:hidden;margin:8px 0 12px}
+.meter b{display:block;height:100%;background:var(--red)}
+.marks{list-style:none;padding:0!important;margin:0 0 12px!important}
+.marks li{display:grid;grid-template-columns:2em 1fr;gap:6px;padding:8px 0;border-top:1px solid var(--line)}
+.marks li:first-child{border-top:0}
+.marks li>b{font-size:18px;text-align:center}
+.marks small{display:block;color:var(--sub);font-size:13px}
+.ans{border-left:4px solid var(--line);padding:2px 0 2px 12px;margin:0 0 12px}
+.ans b{display:block;font-size:13px;color:var(--sub)}
+.ans p{margin:0!important;white-space:pre-wrap}
+.cta{background:var(--kraft);color:var(--kraft-ink);border:0}
+.cta ul{font-size:13px}
+.cta .btn{width:100%}
+.addrow{display:flex;gap:8px;margin-top:10px}
+.addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
+footer{font-size:12px;color:var(--sub);margin-top:22px}
+footer p{margin:0 0 8px}
+footer a{color:var(--sub)}
+@media print{.actions,.link,footer{display:none}}
+
+:root{--mkc:rgba(207,58,32,.22)}
+@media (prefers-color-scheme:dark){:root{--mkc:rgba(255,122,92,.36)}}
+header{position:relative;overflow:hidden}
+header>*{position:relative}
+.nb{display:inline-block}
+.hno{position:absolute!important;right:6px;bottom:-24px;font-size:96px;font-weight:900;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:2px rgba(58,45,20,.13);pointer-events:none;animation:floaty 7s ease-in-out infinite}
+@media (prefers-color-scheme:dark){.hno{-webkit-text-stroke-color:rgba(243,227,190,.2)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(9px) rotate(-4deg)}}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*90ms)}
+.js .rv.in{opacity:1;transform:none}
+.kicker{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important;letter-spacing:.04em}
+.mk{font-weight:700;background:linear-gradient(var(--mkc),var(--mkc)) no-repeat 0 92%/0% 38%;transition:background-size .9s ease .4s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.in .mk,html:not(.js) .mk{background-size:100% 38%}
+.sum3{list-style:none;margin:0!important;padding:0!important}
+.sum3 li{display:grid;grid-template-columns:5.6em 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.sum3 li:first-child{border-top:0;padding-top:4px}
+.sum3 li:last-child{padding-bottom:0}
+.sum3 b{font-size:12px;color:var(--sub);padding-top:3px}
+.signs{list-style:none;margin:0 0 8px!important;padding:0!important}
+.signs li{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;padding:7px 0;font-size:15.5px;font-weight:700;line-height:1.6}
+.signs svg{width:24px;height:24px;margin-top:1px}
+.signs circle{fill:none;stroke:var(--red);stroke-width:2.2;opacity:.35}
+.signs path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .45s ease;transition-delay:calc(var(--i,0)*220ms + 450ms)}
+.in .signs path,html:not(.js) .signs path{stroke-dashoffset:0}
+.fig{margin:0 0 12px;padding:12px 10px 8px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+.fig figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11.5px;color:var(--sub);margin-top:4px}
+.fig .link{font-size:12px;padding:4px 0;white-space:nowrap}
+.steps{list-style:none;margin:0 0 12px!important;padding:0!important;counter-reset:s}
+.steps li{position:relative;padding:1px 0 14px 40px;font-size:15px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--on-ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.steps li::after{content:"";position:absolute;left:13px;top:31px;bottom:3px;width:2px;background:var(--line)}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.found{background:var(--kraft);color:var(--kraft-ink);border-radius:14px;padding:12px 14px;margin:0 0 10px}
+.found b{display:block;font-size:12px;margin-bottom:2px}
+.found p{margin:0!important;font-weight:700;font-size:15.5px!important;line-height:1.6}
+.myth{display:grid;gap:6px}
+.myth div{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:center;border-radius:14px;padding:12px;font-weight:700;font-size:15px;line-height:1.55}
+.myth .x{background:var(--chip);color:var(--sub)}
+.myth .x span{text-decoration:line-through;text-decoration-thickness:2px}
+.myth .o{background:var(--ink);color:var(--on-ink)}
+.myth i{font-style:normal;font-size:19px;text-align:center}
+.myth .arrow{margin:0!important;text-align:center;font-size:17px!important;color:var(--sub);line-height:1}
+.exits{list-style:none;margin:0 0 10px!important;padding:0!important;display:grid;gap:8px}
+.exits li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;border:1.5px solid var(--line);border-radius:14px;padding:12px;background:var(--bg)}
+.exits li>b{width:30px;height:30px;border-radius:9px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px}
+.exits strong{display:block;font-size:15.5px;line-height:1.5}
+.exits span{display:block;font-size:14px;color:var(--sub)}
+.nextc{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-decoration:none;color:inherit}
+.nextc small{display:block;font-size:12px;color:var(--sub)}
+.nextc b{font-size:17px}
+.nextc i{font-style:normal;font-size:22px}
+.back{font-size:14px;margin:0 0 14px}
+.back a{color:var(--sub)}
+.it{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.it:first-child{border-top:0;padding-top:0}
+.it .q{margin-bottom:12px}
+.chips.nums .chip{min-width:42px;padding:6px 0;text-align:center}
+.kind{min-width:68px}
+.card h3{font-size:15px;margin:16px 0 6px}
+input[type=text]+input[type=text]{margin-top:8px}
+.sec{font-size:21px;margin:22px 2px 4px;line-height:1.4}
+.secl{font-size:14px;color:var(--sub);margin:0 2px 12px}
+.days{list-style:none;margin:0!important;padding:0!important}
+.days li{border-top:1px solid var(--line)}
+.days li:first-child{border-top:0}
+.days a{display:grid;grid-template-columns:4.2em 1fr auto;gap:6px;align-items:center;padding:10px 0;text-decoration:none;font-size:15px}
+.days a b{font-size:12px;color:var(--sub)}
+.days a i{font-style:normal;color:var(--sub)}
+details.narr summary{font-weight:700;font-size:14px;cursor:pointer}
+details.narr p{font-size:14px!important;margin:10px 0 0!important}
+details.narr b{display:block;font-size:12px;color:var(--red)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.mk{transition:none;background-size:100% 38%}.signs path{transition:none;stroke-dashoffset:0}.hno,.pbtn::after,.bgw span,.go i{animation:none!important}}
+@media print{.js .rv{opacity:1!important;transform:none!important}.vid,.float{display:none}}
+
+.art{display:block;width:100%;height:auto;--fg:var(--ink);--mu:var(--sub);--ac:var(--red);--ac2:#C8962B;--pa:var(--chip);--onac:#fff;--onac2:#2A2110;font-family:inherit}
+@media (prefers-color-scheme:dark){.art{--ac2:#E3C377;--onac2:#2A2110}}
+.art text{font-size:13px;font-weight:700;fill:var(--fg)}
+.art .tm{font-size:11.5px;font-weight:500;fill:var(--mu)}
+.art .ta{fill:var(--ac)}
+.art .t2{fill:var(--ac2)}
+.art .tk{font-size:11.5px;fill:var(--onac2)}
+.art .big{font-size:30px;fill:var(--mu)}
+.art .ln{fill:none;stroke:var(--fg);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.art .lm{fill:none;stroke:var(--mu);stroke-width:1.5;stroke-dasharray:3 5;stroke-linecap:round;opacity:.7}
+.art .lm2{stroke:var(--mu);stroke-width:3;stroke-linecap:round}
+.art .la{fill:none;stroke:var(--ac);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+.art .l2{fill:none;stroke:var(--ac2);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.art .chk{fill:none;stroke:var(--onac);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.art .fa{fill:var(--ac)}.art .ff{fill:var(--fg)}.art .fm{fill:var(--mu)}.art .fp{fill:var(--pa)}.art .f2{fill:var(--ac2)}
+.art .medal{fill:none;stroke:var(--onac2);stroke-width:2.5;opacity:.55}
+.art .wedge{fill-opacity:.22}
+.art .dots circle{fill:var(--mu)}
+.art .opts circle{fill:var(--pa);stroke:var(--mu);stroke-width:1.5}
+.art [data-at]{opacity:0;transition:opacity .45s ease,transform .6s cubic-bezier(.2,.9,.25,1.15);transition-delay:calc(var(--i,0)*110ms)}
+.art [data-at].show{opacity:1}
+.art .a-pop{transform:scale(.45);transform-box:fill-box;transform-origin:center}
+.art .a-pop.show{transform:none}
+.art .a-up{transform:translateY(9px)}
+.art .a-up.show{transform:none}
+.art .a-draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease,opacity .05s}
+.art .a-draw.slow{transition:stroke-dashoffset 2.2s ease-out,opacity .05s}
+.art .a-draw.show{stroke-dashoffset:0}
+.art .a-grow{transform:scaleY(0);transform-box:fill-box;transform-origin:50% 100%;transition:transform .8s cubic-bezier(.2,.9,.25,1.1),opacity .1s}
+.art .a-grow.show{transform:none}
+.art .a-growx{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .1s;transition-delay:calc(var(--i,0)*110ms)}
+.art .a-growx.show{transform:none}
+.art .a-meter{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .1s}
+.art .a-meter.show{transform:none}
+.art .a-meter.show.sm{transform:scaleX(var(--to,.4))}
+.art .heart.show.sm{transform:scale(.68);opacity:.45}
+.art .flag{transition:transform 1.4s cubic-bezier(.3,.7,.2,1),opacity .4s}
+.art .flag.show.sm{transform:translateX(216px)}
+.art .dots circle{opacity:.25;animation:dotrun 1.8s linear infinite}
+.art .dots circle:nth-child(2){animation-delay:.2s}.art .dots circle:nth-child(3){animation-delay:.4s}.art .dots circle:nth-child(4){animation-delay:.6s}.art .dots circle:nth-child(5){animation-delay:.8s}.art .dots circle:nth-child(6){animation-delay:1s}.art .dots circle:nth-child(7){animation-delay:1.2s}.art .dots circle:nth-child(8){animation-delay:1.4s}.art .dots circle:nth-child(9){animation-delay:1.6s}
+@keyframes dotrun{0%,100%{opacity:.2}30%{opacity:1}}
+.art .scan.show{animation:scan 2.4s ease-in-out infinite}
+@keyframes scan{0%{transform:translate(0,0)}25%{transform:translate(144px,0)}50%{transform:translate(240px,44px)}75%{transform:translate(48px,44px)}100%{transform:translate(0,0)}}
+.art .spark.show{animation:spark 1.2s ease-in-out infinite alternate}
+@keyframes spark{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.art [data-at],.art .flag{transition:none!important}.art .dots circle,.art .scan.show,.art .spark.show{animation:none!important;opacity:1}}</style>
+<script>const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store = {
+  get(k, d){ try { const v = localStorage.getItem('jk_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v){ try { localStorage.setItem('jk_' + k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+  del(k){ try { localStorage.removeItem('jk_' + k); } catch (e) {} }
+};
+async function copyText(text, msgEl){
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    try { ok = document.execCommand('copy'); } catch (_) {}
+    ta.remove();
+  }
+  if (msgEl) msgEl.textContent = ok ? 'コピーしました。メモやLINEに貼れます。' : 'コピーできませんでした。文を長押しして選んでください。';
+  return ok;
+}
+const lineLink = text => 'https://line.me/R/oaMessage/%40374gqpbg/?' + encodeURIComponent(text);
+// チップ（1つだけ選ぶ）。onPick(value) を呼ぶ
+function chipGroup(el, items, value, onPick){
+  el.innerHTML = items.map(t => '<button type="button" class="chip" aria-pressed="' + (t === value) + '">' + esc(t) + '</button>').join('');
+  el.onclick = e => { const b = e.target.closest('.chip'); if (!b) return;
+    $$('.chip', el).forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(b.textContent); };
+}
+document.documentElement.classList.add('js');
+// 図や場面の「段階」を進める。data-at 以上で表示、data-until 以上で消す、data-sm 以上で縮む・動く
+function setStep(root, k){
+  $$('[data-at]', root).forEach(el => {
+    const u = el.dataset.until;
+    el.classList.toggle('show', k >= +el.dataset.at && !(u && k >= +u));
+    if (el.dataset.sm) el.classList.toggle('sm', k >= +el.dataset.sm);
+  });
+}
+const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+function playFig(fig){
+  const svg = $('.art', fig), n = +fig.dataset.steps; clearInterval(fig._t);
+  if (calm) { setStep(svg, n); return; }
+  let k = -1; setStep(svg, -1);
+  const tick = () => { k++; setStep(svg, k); if (k >= n - 1) clearInterval(fig._t); };
+  setTimeout(tick, 200); fig._t = setInterval(tick, 1150);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const els = $$('.rv, .fig');
+  const show = el => { el.classList.add('in'); if (el.classList.contains('fig')) playFig(el); };
+  if (!('IntersectionObserver' in window) || calm) { els.forEach(show); }
+  else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }), { threshold: 0.18 });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => els.forEach(el => { if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight * 0.9) { show(el); io.unobserve(el); } }), 1500);
+  }
+  $$('.replay').forEach(b => b.addEventListener('click', () => playFig(b.closest('.fig'))));
+});</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <span class="hno" aria-hidden="true">7</span><p class="lab">罠 その7｜比較の罠</p>
+  <h1><span class="nb">上に行くほど、</span><span class="nb">自信がしぼむ</span></h1>
+  <p class="lead">上手くなるほど、自信がなくなる。それは、実力が足りないからではありません。</p>
+  <span class="pill">7日目・約4分</span>
+</header>
+<noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
+<section class="card rv">
+  <p class="kicker">この罠を3行で</p>
+  <ul class="sum3">
+    <li><b>起きること</b><span>上手くなるほど、もっと上手い人ばかりが目に入る。</span></li>
+    <li><b>理由</b><span>自信は「実力」より「まわりの人」で決まりやすいもの。上に行くほど、くらべる相手も上がります。</span></li>
+    <li><b>今夜できること</b><span>今やっていることを1つ、記録に残す（写真・動画・数字）。1か月後に並べるためです。</span></li>
+  </ul>
+</section>
+
+<section class="card rv">
+  <h2>こんなこと、ありませんか</h2>
+  <ul class="signs"><li class="rv" style="--i:1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>まわりから見れば上手いのに、「自分はまだまだ」と感じる</span></li><li class="rv" style="--i:2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>SNSで上手い人を見ると、やる気がなくなる</span></li><li class="rv" style="--i:3"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>始めたころのほうが、自信があった</span></li></ul>
+  <p class="note">1つでも当てはまれば、この罠にはまっているかもしれません。</p>
+</section>
+
+<section class="card rv">
+  <h2>なぜ、そうなるのか</h2>
+  <figure class="fig" data-steps="5"><svg class="art" viewBox="0 0 320 190" role="img" aria-label="同じ実力でも、まわりのレベルが上がると自信が下がる図">
+<text data-at="0" class="tm" x="84" y="14" text-anchor="middle">ふつうの場所</text>
+<g data-at="0" class="a-pop"><circle class="fm" cx="44" cy="68" r="7"/><circle class="fm" cx="124" cy="68" r="7"/><circle class="fm" cx="52" cy="120" r="7"/><circle class="fm" cx="116" cy="120" r="7"/><circle class="fm" cx="84" cy="48" r="7"/></g>
+<circle data-at="0" class="fa a-pop" cx="84" cy="92" r="13"/>
+<text data-at="0" class="tm" x="84" y="142" text-anchor="middle">自分</text>
+<path data-at="1" class="ln a-draw" pathLength="1" d="M138 92 H168 M160 84 L170 92 L160 100"/>
+<text data-at="1" class="tm" x="236" y="14" text-anchor="middle">レベルの高い場所</text>
+<circle data-at="1" class="fa a-pop" cx="236" cy="92" r="13"/>
+<g data-at="2" class="a-pop"><circle class="ff" cx="236" cy="46" r="19"/><circle class="ff" cx="186" cy="76" r="19"/><circle class="ff" cx="286" cy="76" r="19"/><circle class="ff" cx="198" cy="128" r="19"/><circle class="ff" cx="274" cy="128" r="19"/></g>
+<text data-at="3" class="t a-up" x="160" y="168" text-anchor="middle">実力は同じ（むしろ上がっている）</text>
+<text data-at="4" class="t ta a-up" x="160" y="186" text-anchor="middle">でも、自信は下がりやすい</text>
+</svg><figcaption><span>※イメージ図（データではありません）</span><button type="button" class="link replay">もう一度見る</button></figcaption></figure>
+  <p>人は、自分の実力を<b class="mk">まわりの人とくらべて</b>判断します。</p><p>上達してレベルの高い場所に入るたびに、まわりも上手い人ばかりになります。</p><p>その結果、実力は上がっているのに、自信だけが下がる、ということが起きます。</p>
+</section>
+
+<section class="card rv">
+  <h2>研究では、こうでした</h2>
+  <ol class="steps"><li class="rv" style="--i:0">学力が同じくらいの生徒でも、通っている学校のレベルによって、「勉強への自信」が変わるかを調べました。</li><li class="rv" style="--i:1">結果は、レベルの高い学校にいる生徒ほど、同じ学力でも「勉強への自信」が低い、というものでした。</li><li class="rv" style="--i:2">この現象は「小さな池の大きな魚効果」と呼ばれています。その後、多くの国の調査でも確かめられました。</li></ol>
+  <div class="found"><b>わかったこと</b><p>自信は、実力そのものより「誰とくらべるか」で変わる。</p></div>
+  <p class="src">出典：Marsh, H. W. (1987). The big-fish-little-pond effect on academic self-concept. <i>Journal of Educational Psychology</i>, 79, 280–295.／Marsh, H. W., &amp; Hau, K.-T. (2003). <i>American Psychologist</i>, 58, 364–376.</p>
+</section>
+
+<section class="card rv">
+  <h2>よくある思いこみ</h2>
+  <div class="myth"><div class="x"><i>✕</i><span>自信がないのは、実力が足りないから</span></div><p class="arrow">↓</p><div class="o"><i>◯</i><span>くらべる相手のレベルが、上がったから</span></div></div>
+</section>
+
+<section class="card rv">
+  <h2>抜け出し方</h2>
+  <ol class="exits"><li class="rv" style="--i:0"><b>1</b><div><strong>くらべる相手を「前の自分」にする</strong><span>1か月前、1年前の自分とくらべる。</span></div></li><li class="rv" style="--i:1"><b>2</b><div><strong>記録を残す</strong><span>写真、動画、数字。あとで並べて見られるように。</span></div></li><li class="rv" style="--i:2"><b>3</b><div><strong>上手い人は「お手本」として見る</strong><span>順位ではなく、まねする材料として。</span></div></li></ol>
+  <p class="note">全部やる必要はありません。できそうなものを1つだけ。</p>
+</section>
+
+<section class="card rv" id="work">
+  <p class="kicker">やってみる・約2分</p>
+  <h2>「前の自分」とくらべる</h2>
+  <p>上手い人ではなく、前の自分とくらべます。増えたものが、目に見えるようになります。</p>
+  <label class="f">続けていること、上達してきたことを1つ
+    <input type="text" id="what" maxlength="24" placeholder="例）仕事のプレゼン、ギター、料理">
+  </label>
+  <h3>いつの自分とくらべますか</h3>
+  <div class="chips" id="when"></div>
+  <label class="f">そのころの自分には、できなかったこと
+    <small>小さなことで大丈夫です。3つまで。</small>
+    <input type="text" id="a0" maxlength="30" placeholder="例）人前で10分話す">
+    <input type="text" id="a1" maxlength="30" placeholder="例）質問にその場で答える">
+    <input type="text" id="a2" maxlength="30" placeholder="例）資料を1時間で作る">
+  </label>
+</section>
+
+<section class="card res" id="res" hidden>
+  <p class="note">くらべた結果</p>
+  <h2 id="head"></h2>
+  <ul class="marks" id="list"></ul>
+  <p>上手い人とくらべているあいだ、これは見えなくなります。くらべる相手を「前の自分」にすると、見えるようになります。</p>
+  <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
+  <div class="actions"><button type="button" class="btn primary" id="copy">一歩をコピー</button></div>
+  <p class="msg" id="msg" role="status"></p>
+</section>
+
+<script>
+const WHEN = ['1か月前', '半年前', '1年前', '始めたころ'];
+let st = store.get('v2w7', null) || { what: '', when: '1年前', a: ['', '', ''] };
+function draw(){
+  const got = st.a.map(x => x.trim()).filter(Boolean);
+  const ok = st.what.trim() && got.length;
+  $('#res').hidden = !ok; if (!ok) return;
+  $('#head').textContent = st.when + 'の自分より、' + got.length + 'つ増えています';
+  $('#list').innerHTML = got.map(x => '<li><b>＋</b><span>' + esc(x) + '</span></li>').join('');
+  const d = new Date(); d.setMonth(d.getMonth() + 1);
+  $('#todo').textContent = '今日の「' + st.what.trim() + '」を、1つ記録に残す（写真・動画・数字）。\n' + (d.getMonth() + 1) + '月' + d.getDate() + '日に、今日の記録と見くらべる。';
+}
+function save(){ store.set('v2w7', st); draw(); }
+$('#what').value = st.what; $('#what').addEventListener('input', e => { st.what = e.target.value; save(); });
+chipGroup($('#when'), WHEN, st.when, v => { st.when = v; save(); });
+[0, 1, 2].forEach(i => { const el = $('#a' + i); el.value = st.a[i]; el.addEventListener('input', e => { st.a[i] = e.target.value; save(); }); });
+$('#copy').addEventListener('click', () => copyText($('#todo').textContent, $('#msg')));
+draw();
+</script>
+
+<a class="card nextc rv" href="d8.html"><span><small>次の罠（8日目のLINEでも届きます）</small><b>罠その8　効率の罠</b></span><i>→</i></a>
+<p class="back"><a href="wana10.html">← 罠10選の動画とチェックリストにもどる</a></p>
+<footer>
+  <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>
+  <p>このページは、考えるきっかけのためのものです。心理検査や診断、医療の助言ではありません。研究の紹介は、わかりやすさのために短くまとめています。</p>
+  <p>作った人：いどむ（理学療法士）</p>
+  <p class="links"><a href="wana10.html">罠10選</a>　<a href="./">自由時間ログ（7日分）</a>　<a href="tokushoho.html">特定商取引法に基づく表記</a>　<a href="privacy.html">プライバシーポリシー</a></p>
+</footer>
+</div>
+</body>
+</html>

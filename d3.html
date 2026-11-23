@@ -6,10 +6,14 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>手軽さの罠をほどく：能動時間をかぞえる｜自由時間の正体</title>
-<meta name="description" content="ゲームやSNSで満たされないしくみと、自由時間のうち自分で動かした時間の割合を出すワークです。">
-<meta property="og:title" content="手軽さの罠をほどく：能動時間をかぞえる">
-<meta property="og:description" content="ゲームやSNSで満たされないしくみと、自由時間のうち自分で動かした時間の割合を出すワークです。">
+<title>罠その3　手軽さの罠：「ついやってしまう」と「楽しい」は別もの｜自由時間の正体</title>
+<meta name="description" content="楽しくないのに、やめられない。それは、意志が弱いからではありません。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="罠その3　手軽さの罠：「ついやってしまう」と「楽しい」は別もの">
+<meta property="og:description" content="楽しくないのに、やめられない。それは、意志が弱いからではありません。">
+<meta property="og:url" content="https://onnu0103.github.io/log/d3.html">
+<meta property="og:image" content="https://onnu0103.github.io/log/og-d3.jpg?v=2">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
 @media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
@@ -105,7 +109,129 @@ textarea{min-height:76px;resize:vertical}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
-@media print{.actions,.link,footer{display:none}}</style>
+@media print{.actions,.link,footer{display:none}}
+
+:root{--mkc:rgba(207,58,32,.22)}
+@media (prefers-color-scheme:dark){:root{--mkc:rgba(255,122,92,.36)}}
+header{position:relative;overflow:hidden}
+header>*{position:relative}
+.nb{display:inline-block}
+.hno{position:absolute!important;right:6px;bottom:-24px;font-size:96px;font-weight:900;line-height:1;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:2px rgba(58,45,20,.13);pointer-events:none;animation:floaty 7s ease-in-out infinite}
+@media (prefers-color-scheme:dark){.hno{-webkit-text-stroke-color:rgba(243,227,190,.2)}}
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(9px) rotate(-4deg)}}
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--i,0)*90ms)}
+.js .rv.in{opacity:1;transform:none}
+.kicker{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important;letter-spacing:.04em}
+.mk{font-weight:700;background:linear-gradient(var(--mkc),var(--mkc)) no-repeat 0 92%/0% 38%;transition:background-size .9s ease .4s;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.in .mk,html:not(.js) .mk{background-size:100% 38%}
+.sum3{list-style:none;margin:0!important;padding:0!important}
+.sum3 li{display:grid;grid-template-columns:5.6em 1fr;gap:8px;padding:9px 0;border-top:1px solid var(--line);font-size:15px}
+.sum3 li:first-child{border-top:0;padding-top:4px}
+.sum3 li:last-child{padding-bottom:0}
+.sum3 b{font-size:12px;color:var(--sub);padding-top:3px}
+.signs{list-style:none;margin:0 0 8px!important;padding:0!important}
+.signs li{display:grid;grid-template-columns:28px 1fr;gap:8px;align-items:start;padding:7px 0;font-size:15.5px;font-weight:700;line-height:1.6}
+.signs svg{width:24px;height:24px;margin-top:1px}
+.signs circle{fill:none;stroke:var(--red);stroke-width:2.2;opacity:.35}
+.signs path{fill:none;stroke:var(--red);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .45s ease;transition-delay:calc(var(--i,0)*220ms + 450ms)}
+.in .signs path,html:not(.js) .signs path{stroke-dashoffset:0}
+.fig{margin:0 0 12px;padding:12px 10px 8px;border-radius:14px;background:var(--bg);border:1px solid var(--line)}
+.fig figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11.5px;color:var(--sub);margin-top:4px}
+.fig .link{font-size:12px;padding:4px 0;white-space:nowrap}
+.steps{list-style:none;margin:0 0 12px!important;padding:0!important;counter-reset:s}
+.steps li{position:relative;padding:1px 0 14px 40px;font-size:15px;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--ink);color:var(--on-ink);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.steps li::after{content:"";position:absolute;left:13px;top:31px;bottom:3px;width:2px;background:var(--line)}
+.steps li:last-child{padding-bottom:0}
+.steps li:last-child::after{display:none}
+.found{background:var(--kraft);color:var(--kraft-ink);border-radius:14px;padding:12px 14px;margin:0 0 10px}
+.found b{display:block;font-size:12px;margin-bottom:2px}
+.found p{margin:0!important;font-weight:700;font-size:15.5px!important;line-height:1.6}
+.myth{display:grid;gap:6px}
+.myth div{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:center;border-radius:14px;padding:12px;font-weight:700;font-size:15px;line-height:1.55}
+.myth .x{background:var(--chip);color:var(--sub)}
+.myth .x span{text-decoration:line-through;text-decoration-thickness:2px}
+.myth .o{background:var(--ink);color:var(--on-ink)}
+.myth i{font-style:normal;font-size:19px;text-align:center}
+.myth .arrow{margin:0!important;text-align:center;font-size:17px!important;color:var(--sub);line-height:1}
+.exits{list-style:none;margin:0 0 10px!important;padding:0!important;display:grid;gap:8px}
+.exits li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;border:1.5px solid var(--line);border-radius:14px;padding:12px;background:var(--bg)}
+.exits li>b{width:30px;height:30px;border-radius:9px;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px}
+.exits strong{display:block;font-size:15.5px;line-height:1.5}
+.exits span{display:block;font-size:14px;color:var(--sub)}
+.nextc{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;text-decoration:none;color:inherit}
+.nextc small{display:block;font-size:12px;color:var(--sub)}
+.nextc b{font-size:17px}
+.nextc i{font-style:normal;font-size:22px}
+.back{font-size:14px;margin:0 0 14px}
+.back a{color:var(--sub)}
+.it{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.it:first-child{border-top:0;padding-top:0}
+.it .q{margin-bottom:12px}
+.chips.nums .chip{min-width:42px;padding:6px 0;text-align:center}
+.kind{min-width:68px}
+.card h3{font-size:15px;margin:16px 0 6px}
+input[type=text]+input[type=text]{margin-top:8px}
+.sec{font-size:21px;margin:22px 2px 4px;line-height:1.4}
+.secl{font-size:14px;color:var(--sub);margin:0 2px 12px}
+.days{list-style:none;margin:0!important;padding:0!important}
+.days li{border-top:1px solid var(--line)}
+.days li:first-child{border-top:0}
+.days a{display:grid;grid-template-columns:4.2em 1fr auto;gap:6px;align-items:center;padding:10px 0;text-decoration:none;font-size:15px}
+.days a b{font-size:12px;color:var(--sub)}
+.days a i{font-style:normal;color:var(--sub)}
+details.narr summary{font-weight:700;font-size:14px;cursor:pointer}
+details.narr p{font-size:14px!important;margin:10px 0 0!important}
+details.narr b{display:block;font-size:12px;color:var(--red)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}.mk{transition:none;background-size:100% 38%}.signs path{transition:none;stroke-dashoffset:0}.hno,.pbtn::after,.bgw span,.go i{animation:none!important}}
+@media print{.js .rv{opacity:1!important;transform:none!important}.vid,.float{display:none}}
+
+.art{display:block;width:100%;height:auto;--fg:var(--ink);--mu:var(--sub);--ac:var(--red);--ac2:#C8962B;--pa:var(--chip);--onac:#fff;--onac2:#2A2110;font-family:inherit}
+@media (prefers-color-scheme:dark){.art{--ac2:#E3C377;--onac2:#2A2110}}
+.art text{font-size:13px;font-weight:700;fill:var(--fg)}
+.art .tm{font-size:11.5px;font-weight:500;fill:var(--mu)}
+.art .ta{fill:var(--ac)}
+.art .t2{fill:var(--ac2)}
+.art .tk{font-size:11.5px;fill:var(--onac2)}
+.art .big{font-size:30px;fill:var(--mu)}
+.art .ln{fill:none;stroke:var(--fg);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.art .lm{fill:none;stroke:var(--mu);stroke-width:1.5;stroke-dasharray:3 5;stroke-linecap:round;opacity:.7}
+.art .lm2{stroke:var(--mu);stroke-width:3;stroke-linecap:round}
+.art .la{fill:none;stroke:var(--ac);stroke-width:4.5;stroke-linecap:round;stroke-linejoin:round}
+.art .l2{fill:none;stroke:var(--ac2);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.art .chk{fill:none;stroke:var(--onac);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.art .fa{fill:var(--ac)}.art .ff{fill:var(--fg)}.art .fm{fill:var(--mu)}.art .fp{fill:var(--pa)}.art .f2{fill:var(--ac2)}
+.art .medal{fill:none;stroke:var(--onac2);stroke-width:2.5;opacity:.55}
+.art .wedge{fill-opacity:.22}
+.art .dots circle{fill:var(--mu)}
+.art .opts circle{fill:var(--pa);stroke:var(--mu);stroke-width:1.5}
+.art [data-at]{opacity:0;transition:opacity .45s ease,transform .6s cubic-bezier(.2,.9,.25,1.15);transition-delay:calc(var(--i,0)*110ms)}
+.art [data-at].show{opacity:1}
+.art .a-pop{transform:scale(.45);transform-box:fill-box;transform-origin:center}
+.art .a-pop.show{transform:none}
+.art .a-up{transform:translateY(9px)}
+.art .a-up.show{transform:none}
+.art .a-draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.1s ease,opacity .05s}
+.art .a-draw.slow{transition:stroke-dashoffset 2.2s ease-out,opacity .05s}
+.art .a-draw.show{stroke-dashoffset:0}
+.art .a-grow{transform:scaleY(0);transform-box:fill-box;transform-origin:50% 100%;transition:transform .8s cubic-bezier(.2,.9,.25,1.1),opacity .1s}
+.art .a-grow.show{transform:none}
+.art .a-growx{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%;transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .1s;transition-delay:calc(var(--i,0)*110ms)}
+.art .a-growx.show{transform:none}
+.art .a-meter{transform:scaleX(0);transform-box:fill-box;transform-origin:0 50%;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .1s}
+.art .a-meter.show{transform:none}
+.art .a-meter.show.sm{transform:scaleX(var(--to,.4))}
+.art .heart.show.sm{transform:scale(.68);opacity:.45}
+.art .flag{transition:transform 1.4s cubic-bezier(.3,.7,.2,1),opacity .4s}
+.art .flag.show.sm{transform:translateX(216px)}
+.art .dots circle{opacity:.25;animation:dotrun 1.8s linear infinite}
+.art .dots circle:nth-child(2){animation-delay:.2s}.art .dots circle:nth-child(3){animation-delay:.4s}.art .dots circle:nth-child(4){animation-delay:.6s}.art .dots circle:nth-child(5){animation-delay:.8s}.art .dots circle:nth-child(6){animation-delay:1s}.art .dots circle:nth-child(7){animation-delay:1.2s}.art .dots circle:nth-child(8){animation-delay:1.4s}.art .dots circle:nth-child(9){animation-delay:1.6s}
+@keyframes dotrun{0%,100%{opacity:.2}30%{opacity:1}}
+.art .scan.show{animation:scan 2.4s ease-in-out infinite}
+@keyframes scan{0%{transform:translate(0,0)}25%{transform:translate(144px,0)}50%{transform:translate(240px,44px)}75%{transform:translate(48px,44px)}100%{transform:translate(0,0)}}
+.art .spark.show{animation:spark 1.2s ease-in-out infinite alternate}
+@keyframes spark{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.art [data-at],.art .flag{transition:none!important}.art .dots circle,.art .scan.show,.art .spark.show{animation:none!important;opacity:1}}</style>
 <script>const $ = (s, r) => (r || document).querySelector(s);
 const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -131,27 +257,99 @@ function chipGroup(el, items, value, onPick){
   el.innerHTML = items.map(t => '<button type="button" class="chip" aria-pressed="' + (t === value) + '">' + esc(t) + '</button>').join('');
   el.onclick = e => { const b = e.target.closest('.chip'); if (!b) return;
     $$('.chip', el).forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(b.textContent); };
-}</script>
+}
+document.documentElement.classList.add('js');
+// 図や場面の「段階」を進める。data-at 以上で表示、data-until 以上で消す、data-sm 以上で縮む・動く
+function setStep(root, k){
+  $$('[data-at]', root).forEach(el => {
+    const u = el.dataset.until;
+    el.classList.toggle('show', k >= +el.dataset.at && !(u && k >= +u));
+    if (el.dataset.sm) el.classList.toggle('sm', k >= +el.dataset.sm);
+  });
+}
+const calm = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+function playFig(fig){
+  const svg = $('.art', fig), n = +fig.dataset.steps; clearInterval(fig._t);
+  if (calm) { setStep(svg, n); return; }
+  let k = -1; setStep(svg, -1);
+  const tick = () => { k++; setStep(svg, k); if (k >= n - 1) clearInterval(fig._t); };
+  setTimeout(tick, 200); fig._t = setInterval(tick, 1150);
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const els = $$('.rv, .fig');
+  const show = el => { el.classList.add('in'); if (el.classList.contains('fig')) playFig(el); };
+  if (!('IntersectionObserver' in window) || calm) { els.forEach(show); }
+  else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { show(e.target); io.unobserve(e.target); } }), { threshold: 0.18 });
+    els.forEach(el => io.observe(el));
+    setTimeout(() => els.forEach(el => { if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight * 0.9) { show(el); io.unobserve(el); } }), 1500);
+  }
+  $$('.replay').forEach(b => b.addEventListener('click', () => playFig(b.closest('.fig'))));
+});</script>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">罠その3｜手軽さの罠</p>
-  <h1>先週末の「能動時間」をかぞえる</h1>
-  <p class="lead">先週末の自由時間を、ざっくり入れてください。自分で動かした時間が何割だったかが出ます。</p>
-  <span class="pill">3日目・約3分</span>
+  <span class="hno" aria-hidden="true">3</span><p class="lab">罠 その3｜手軽さの罠</p>
+  <h1><span class="nb">「ついやってしまう」と</span><span class="nb">「楽しい」は別もの</span></h1>
+  <p class="lead">楽しくないのに、やめられない。それは、意志が弱いからではありません。</p>
+  <span class="pill">3日目・約4分</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
-<section class="card">
-  <h2>今日の考え方</h2>
-  <p>ゲームやSNSを、楽しくないのに続けてしまう。「次が欲しくなる」気持ちと「満たされる」感じは、脳の別のしくみで動いていることがわかっています。次に何が出るかわからない形は、「もっと」のほうだけを強く引き出します。</p>
-  <p>自由時間には、流れてくるものを受け取る<b>受動</b>の時間と、自分で手や体を動かす<b>能動</b>の時間があります。日々の体験を記録する研究では、能動的な余暇のほうが、没頭や充実が高く報告されています。</p>
-  <p class="src">参考：Berridge & Robinson (1998)、体験サンプリング法による余暇の研究（Csikszentmihalyi ほか）</p>
+<section class="card rv">
+  <p class="kicker">この罠を3行で</p>
+  <ul class="sum3">
+    <li><b>起きること</b><span>ゲームやSNSを、楽しくないのに何時間も続けてしまう。</span></li>
+    <li><b>理由</b><span>「欲しくなる」と「満たされる」は、脳の別の仕組みです。意志が弱いからではありません。</span></li>
+    <li><b>今夜できること</b><span>スマホを別の部屋に置いて、15分だけ何かを作る（メモ3行でもいい）。</span></li>
+  </ul>
 </section>
 
-<section class="card">
-  <h2>先週末、何に何時間くらい使いましたか</h2>
-  <p class="note">＋とーで、30分ずつ増減します。だいたいで大丈夫です。丸いボタンで「受動／能動」を切り替えられます。ゲームや読書は人によります。自分で工夫して上達をねらっているなら「能動」にしてください。</p>
+<section class="card rv">
+  <h2>こんなこと、ありませんか</h2>
+  <ul class="signs"><li class="rv" style="--i:1"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>楽しいわけではないのに、スマホを開いてしまう</span></li><li class="rv" style="--i:2"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>気づくと1〜2時間たっていて、何も残っていない</span></li><li class="rv" style="--i:3"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path pathLength="1" d="M7 12.5 l3.5 3.5 L17 9"/></svg><span>やめたあと、少しむなしい</span></li></ul>
+  <p class="note">1つでも当てはまれば、この罠にはまっているかもしれません。</p>
+</section>
+
+<section class="card rv">
+  <h2>なぜ、そうなるのか</h2>
+  <figure class="fig" data-steps="4"><svg class="art" viewBox="0 0 320 190" role="img" aria-label="つい手が伸びる気持ちは強いのに、満たされる感じは小さい図">
+<g data-at="0" class="a-pop"><rect class="ln" x="22" y="34" width="46" height="84" rx="9"/><line class="lm2" x1="32" y1="52" x2="58" y2="52"/><line class="lm2" x1="32" y1="66" x2="58" y2="66"/><line class="lm2" x1="32" y1="80" x2="50" y2="80"/><circle class="fm" cx="45" cy="105" r="3.5"/></g>
+<text data-at="1" class="t" x="92" y="48">つい手が伸びる</text>
+<rect data-at="1" class="fp" x="92" y="56" width="206" height="18" rx="9"/>
+<rect data-at="2" class="fa a-growx" x="92" y="56" width="190" height="18" rx="9"/>
+<text data-at="1" class="t" x="92" y="104">満たされる</text>
+<rect data-at="1" class="fp" x="92" y="112" width="206" height="18" rx="9"/>
+<rect data-at="3" class="f2 a-growx" x="92" y="112" width="52" height="18" rx="9"/>
+<text data-at="1" class="tm" x="298" y="92" text-anchor="end">脳の中では、別の仕組み</text>
+<text data-at="3" class="t a-up" x="160" y="170" text-anchor="middle">手は伸びるのに、満たされない</text>
+</svg><figcaption><span>※イメージ図（データではありません）</span><button type="button" class="link replay">もう一度見る</button></figcaption></figure>
+  <p>脳の中では、<b class="mk">「欲しくなる」と「満たされる」</b>が、別々の仕組みで動いています。</p><p>スマホやゲームは、「次は何が出るか」で、「欲しくなる」ほうだけを強く引っぱります。</p><p>だから、手は伸びるのに、終わっても満たされない、ということが起きます。</p>
+</section>
+
+<section class="card rv">
+  <h2>研究では、こうでした</h2>
+  <ol class="steps"><li class="rv" style="--i:0">研究者は、ラットの脳で、ドーパミンがほとんど働かない状態を作りました。</li><li class="rv" style="--i:1">ラットは、自分からエサを取りに行かなくなりました。「欲しがる」ことが、なくなったのです。</li><li class="rv" style="--i:2">ところが、甘い水を口に入れると、「おいしい」ときの表情は、そのまま残っていました。</li></ol>
+  <div class="found"><b>わかったこと</b><p>「欲しがる仕組み」と「味わって満足する仕組み」は別もの。片方だけが強くなることがある。</p></div>
+  <p class="src">出典：Berridge, K. C., &amp; Robinson, T. E. (1998). What is the role of dopamine in reward: hedonic impact, reward learning, or incentive salience? <i>Brain Research Reviews</i>, 28, 309–369.</p>
+</section>
+
+<section class="card rv">
+  <h2>よくある思いこみ</h2>
+  <div class="myth"><div class="x"><i>✕</i><span>やめられないのは、意志が弱いから</span></div><p class="arrow">↓</p><div class="o"><i>◯</i><span>「欲しくなる」だけを強く引っぱる作りだから</span></div></div>
+</section>
+
+<section class="card rv">
+  <h2>抜け出し方</h2>
+  <ol class="exits"><li class="rv" style="--i:0"><b>1</b><div><strong>やめようとしない</strong><span>15分だけ、別のことと入れかえる。</span></div></li><li class="rv" style="--i:1"><b>2</b><div><strong>手や体を動かすことを選ぶ</strong><span>作る、動く、練習する。</span></div></li><li class="rv" style="--i:2"><b>3</b><div><strong>スマホを別の部屋に置く</strong><span>手が届かなければ、伸びません。</span></div></li></ol>
+  <p class="note">全部やる必要はありません。できそうなものを1つだけ。</p>
+</section>
+
+<section class="card rv" id="work">
+  <p class="kicker">やってみる・約3分</p>
+  <h2>先週末の時間を数える</h2>
+  <p>先週末の自由時間を、ざっくり入れてください。「自分から動いた時間」が何割だったかが出ます。</p>
+  <p class="note">＋とーで、30分ずつ変わります。だいたいで大丈夫です。丸いボタンで「受け身／自分から」を切りかえられます。ゲームや読書は人によります。自分で工夫して、上達をねらっているなら「自分から」にしてください。</p>
   <div id="rows"></div>
   <div class="addrow">
     <input type="text" id="addName" maxlength="20" placeholder="ほかにあれば書く" aria-label="ほかの過ごし方">
@@ -163,12 +361,12 @@ function chipGroup(el, items, value, onPick){
   <p class="note">結果</p>
   <p id="empty">時間を入れると、ここに結果が出ます。</p>
   <div id="filled" hidden>
-    <p class="big"><span id="pct">0</span><small>% が能動時間</small></p>
+    <p class="big"><span id="pct">0</span><small>% が、自分から動いた時間</small></p>
     <div class="meter"><b id="mt" style="width:0%"></b></div>
     <p id="sum"></p>
     <p id="read"></p>
-    <p class="note">良い・悪いの点数ではありません。いまの現在地です。</p>
-    <h3>来週末、15分だけ入れ替えるなら</h3>
+    <p class="note">良い・悪いの点数ではありません。今の現在地です。</p>
+    <h3>来週末、15分だけ入れかえるなら</h3>
     <div class="chips" id="toChips"></div>
     <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
     <div class="actions"><button type="button" class="btn primary" id="copy">一歩をコピー</button></div>
@@ -177,16 +375,17 @@ function chipGroup(el, items, value, onPick){
 </section>
 
 <script>
-const PRE = [['動画・配信', 'p'], ['SNS', 'p'], ['ゲーム', 'p'], ['漫画・読書', 'p'], ['ゴロゴロ・二度寝', 'p'], ['買い物', 'p'],
+const PRE = [['動画・配信', 'p'], ['SNS', 'p'], ['ゲーム', 'p'], ['マンガ・読書', 'p'], ['ゴロゴロ・二度寝', 'p'], ['買い物', 'p'],
   ['運動・散歩', 'a'], ['料理', 'a'], ['つくる（絵・文章・音楽・工作）', 'a'], ['練習（楽器・語学・勉強）', 'a'], ['人と会う・話す', 'a']];
 const TO = ['散歩', '料理', '絵', '文章', '楽器', '工作', '筋トレ', '勉強'];
-let st = store.get('w3', null) || { rows: PRE.map(([n, k]) => ({ n, k, h: 0 })), to: '散歩' };
+const KN = { a: '自分から', p: '受け身' };
+let st = store.get('v2w3', null) || { rows: PRE.map(([n, k]) => ({ n, k, h: 0 })), to: '散歩' };
 const fmt = h => (h % 1 ? h.toFixed(1) : String(h)) + '時間';
 
 function drawRows(){
   $('#rows').innerHTML = st.rows.map((r, i) =>
     '<div class="rowx" data-i="' + i + '"><span>' + esc(r.n) + '</span>' +
-    '<button type="button" class="kind" data-k="' + r.k + '" aria-label="' + esc(r.n) + 'は' + (r.k === 'a' ? '能動' : '受動') + '。押すと切り替え">' + (r.k === 'a' ? '能動' : '受動') + '</button>' +
+    '<button type="button" class="kind" data-k="' + r.k + '" aria-label="' + esc(r.n) + 'は「' + KN[r.k] + '」。押すと切りかえ">' + KN[r.k] + '</button>' +
     '<span class="stp"><button type="button" data-d="-0.5" aria-label="' + esc(r.n) + 'を30分減らす">−</button><output>' + fmt(r.h) + '</output><button type="button" data-d="0.5" aria-label="' + esc(r.n) + 'を30分増やす">＋</button></span></div>').join('');
 }
 function drawRes(){
@@ -196,16 +395,16 @@ function drawRes(){
   if (!total) return;
   const pct = Math.round(act / total * 100);
   $('#pct').textContent = pct; $('#mt').style.width = pct + '%';
-  $('#sum').textContent = '自由時間' + fmt(total) + 'のうち、能動が' + fmt(act) + '、受動が' + fmt(total - act) + 'でした。';
-  $('#read').textContent = pct < 20 ? 'ほとんどが、受け取る時間でした。休日が終わって何も残らない感じは、ここから来ているかもしれません。全部を変える必要はありません。15分だけ入れ替えます。'
-    : pct < 50 ? '受け取る時間のほうが多めです。全部を変える必要はありません。15分だけ入れ替えます。'
-    : '半分以上が、自分で動かした時間でした。それでも残らないなら、原因は時間の量ではなさそうです。1日目の「没頭の3条件」で、中身のほうを点検してみてください。';
+  $('#sum').textContent = '自由時間' + fmt(total) + 'のうち、自分から動いた時間が' + fmt(act) + '、受け身の時間が' + fmt(total - act) + 'でした。';
+  $('#read').textContent = pct < 20 ? 'ほとんどが、受け取るだけの時間でした。休日が終わって何も残らない感じは、ここから来ているかもしれません。全部を変える必要はありません。15分だけ入れかえます。'
+    : pct < 50 ? '受け取るだけの時間のほうが多めです。全部を変える必要はありません。15分だけ入れかえます。'
+    : '半分以上が、自分から動いた時間でした。それでも満たされないなら、原因は時間の量ではなさそうです。1日目の「夢中になれる3つの条件」で、中身のほうをチェックしてみてください。';
   const from = st.rows.filter(r => r.k === 'p' && r.h > 0).sort((x, y) => y.h - x.h)[0];
   $('#todo').textContent = from
-    ? '来週末は、「' + from.n + '」の' + fmt(from.h) + 'のうち15分だけを、' + st.to + 'に入れ替える。\n終わった直後に、0〜10で点数をつける。'
+    ? '来週末は、「' + from.n + '」の' + fmt(from.h) + 'のうち15分だけを、' + st.to + 'に入れかえる。\n終わった直後に、0〜10で点数をつける。'
     : '来週末も、' + st.to + 'を15分。\n終わった直後に、0〜10で点数をつける。';
 }
-function save(){ store.set('w3', st); drawRes(); }
+function save(){ store.set('v2w3', st); drawRes(); }
 $('#rows').addEventListener('click', e => {
   const row = e.target.closest('.rowx'); if (!row) return; const r = st.rows[row.dataset.i];
   const k = e.target.closest('.kind'), b = e.target.closest('[data-d]');
@@ -220,11 +419,14 @@ chipGroup($('#toChips'), TO, st.to, v => { st.to = v; save(); });
 $('#copy').addEventListener('click', () => copyText($('#todo').textContent, $('#msg')));
 drawRows(); drawRes();
 </script>
+
+<a class="card nextc rv" href="d4.html"><span><small>次の罠（4日目のLINEでも届きます）</small><b>罠その4　やる気の罠</b></span><i>→</i></a>
+<p class="back"><a href="wana10.html">← 罠10選の動画とチェックリストにもどる</a></p>
 <footer>
   <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>
-  <p>このページは、考えるきっかけのためのワークです。心理検査や診断、医療の助言ではありません。</p>
+  <p>このページは、考えるきっかけのためのものです。心理検査や診断、医療の助言ではありません。研究の紹介は、わかりやすさのために短くまとめています。</p>
   <p>作った人：いどむ（理学療法士）</p>
-  <p class="links"><a href="./">自由時間ログ（7日分）</a>　<a href="tokushoho.html">特定商取引法に基づく表記</a>　<a href="privacy.html">プライバシーポリシー</a></p>
+  <p class="links"><a href="wana10.html">罠10選</a>　<a href="./">自由時間ログ（7日分）</a>　<a href="tokushoho.html">特定商取引法に基づく表記</a>　<a href="privacy.html">プライバシーポリシー</a></p>
 </footer>
 </div>
 </body>
