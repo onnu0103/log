@@ -6,10 +6,10 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>没頭の3条件チェック｜自由時間の正体</title>
-<meta name="description" content="時間を忘れるほど没頭するための3つの条件で、いまの趣味や作業を点検するワークです。">
-<meta property="og:title" content="没頭の3条件チェック">
-<meta property="og:description" content="時間を忘れるほど没頭するための3つの条件で、いまの趣味や作業を点検するワークです。">
+<title>手軽さの罠をほどく：能動時間をかぞえる｜自由時間の正体</title>
+<meta name="description" content="ゲームやSNSで満たされないしくみと、自由時間のうち自分で動かした時間の割合を出すワークです。">
+<meta property="og:title" content="手軽さの罠をほどく：能動時間をかぞえる">
+<meta property="og:description" content="ゲームやSNSで満たされないしくみと、自由時間のうち自分で動かした時間の割合を出すワークです。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
 @media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
@@ -93,6 +93,15 @@ textarea{min-height:76px;resize:vertical}
 .cta .btn{width:100%}
 .addrow{display:flex;gap:8px;margin-top:10px}
 .addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
@@ -127,89 +136,89 @@ function chipGroup(el, items, value, onPick){
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">自由時間の正体・3日目</p>
-  <h1>没頭の3条件チェック</h1>
-  <p class="lead">「やっているのに、のめりこめない」ことを1つ選んで、3つの条件で点検します。足りない条件と直し方が出ます。</p>
-  <span class="pill">約3分</span>
+  <p class="lab">罠その3｜手軽さの罠</p>
+  <h1>先週末の「能動時間」をかぞえる</h1>
+  <p class="lead">先週末の自由時間を、ざっくり入れてください。自分で動かした時間が何割だったかが出ます。</p>
+  <span class="pill">3日目・約3分</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
 <section class="card">
   <h2>今日の考え方</h2>
-  <p>時間を忘れてのめりこむ状態は「フロー」と呼ばれます。起きやすい条件が、研究で整理されています。</p>
-  <ul>
-    <li><b>目標</b>がはっきりしている</li>
-    <li><b>手ごたえ</b>がすぐに返ってくる</li>
-    <li><b>難しさ</b>が、いまの腕前とつり合っている</li>
-  </ul>
-  <p>のめりこめないのは、根気や才能の問題とはかぎりません。この3つのどれかが欠けていることがあります。</p>
-  <p class="src">参考：フロー理論（Csikszentmihalyi）</p>
+  <p>ゲームやSNSを、楽しくないのに続けてしまう。「次が欲しくなる」気持ちと「満たされる」感じは、脳の別のしくみで動いていることがわかっています。次に何が出るかわからない形は、「もっと」のほうだけを強く引き出します。</p>
+  <p>自由時間には、流れてくるものを受け取る<b>受動</b>の時間と、自分で手や体を動かす<b>能動</b>の時間があります。日々の体験を記録する研究では、能動的な余暇のほうが、没頭や充実が高く報告されています。</p>
+  <p class="src">参考：Berridge & Robinson (1998)、体験サンプリング法による余暇の研究（Csikszentmihalyi ほか）</p>
 </section>
 
 <section class="card">
-  <label class="f">点検すること
-    <small>趣味、勉強、作りかけのもの。なんでも大丈夫です。</small>
-    <input type="text" id="what" maxlength="24" placeholder="例）ギターの練習">
-  </label>
-  <fieldset class="q"><legend>1. やっている最中、「いま何をすればいいか」ははっきりしていますか</legend>
-    <div class="opts three" data-q="goal"><button type="button" class="opt" data-v="2">はっきり</button><button type="button" class="opt" data-v="1">ぼんやり</button><button type="button" class="opt" data-v="0">決めてない</button></div></fieldset>
-  <fieldset class="q"><legend>2. うまくいったかどうかは、その場でわかりますか</legend>
-    <div class="opts three" data-q="fb"><button type="button" class="opt" data-v="2">すぐわかる</button><button type="button" class="opt" data-v="1">あとで</button><button type="button" class="opt" data-v="0">わからない</button></div></fieldset>
-  <fieldset class="q"><legend>3. いまの自分にとって、難しさはどうですか</legend>
-    <div class="opts three" data-q="lv"><button type="button" class="opt" data-v="e">簡単すぎる</button><button type="button" class="opt" data-v="ok">少し背伸び</button><button type="button" class="opt" data-v="h">難しすぎる</button></div></fieldset>
+  <h2>先週末、何に何時間くらい使いましたか</h2>
+  <p class="note">＋とーで、30分ずつ増減します。だいたいで大丈夫です。丸いボタンで「受動／能動」を切り替えられます。ゲームや読書は人によります。自分で工夫して上達をねらっているなら「能動」にしてください。</p>
+  <div id="rows"></div>
+  <div class="addrow">
+    <input type="text" id="addName" maxlength="20" placeholder="ほかにあれば書く" aria-label="ほかの過ごし方">
+    <button type="button" class="btn" id="addBtn">追加</button>
+  </div>
 </section>
 
-<section class="card res" id="res" hidden>
-  <p class="note">点検の結果</p>
-  <h2 id="head"></h2>
-  <ul class="marks" id="marks"></ul>
-  <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
-  <div class="actions"><button type="button" class="btn primary" id="copy">一歩をコピー</button></div>
-  <p class="msg" id="msg" role="status"></p>
+<section class="card res" id="res">
+  <p class="note">結果</p>
+  <p id="empty">時間を入れると、ここに結果が出ます。</p>
+  <div id="filled" hidden>
+    <p class="big"><span id="pct">0</span><small>% が能動時間</small></p>
+    <div class="meter"><b id="mt" style="width:0%"></b></div>
+    <p id="sum"></p>
+    <p id="read"></p>
+    <p class="note">良い・悪いの点数ではありません。いまの現在地です。</p>
+    <h3>来週末、15分だけ入れ替えるなら</h3>
+    <div class="chips" id="toChips"></div>
+    <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
+    <div class="actions"><button type="button" class="btn primary" id="copy">一歩をコピー</button></div>
+    <p class="msg" id="msg" role="status"></p>
+  </div>
 </section>
 
 <script>
-let st = store.get('d3', null) || { what: '', goal: null, fb: null, lv: null };
-const FIX = {
-  goal: ['目標', '終わりが見える形に小さくする。「15分で、ここまでを1つ終える」と決めてから始める。'],
-  fb: ['手ごたえ', '結果が目に見えるようにする。数える・撮る・録る。前回と並べて比べる。'],
-  e: ['難しさ', '少しだけ難しくする。時間を半分にする、しばりを1つ足す、少し上のお手本をまねる。'],
-  h: ['難しさ', '半分に割る。いちばん簡単な部分だけをやる、お手本をそのままなぞる。']
-};
-function draw(){
-  $$('.opts[data-q]').forEach(g => $$('.opt', g).forEach(b => b.setAttribute('aria-pressed', String(st[g.dataset.q]) === b.dataset.v)));
-  const done = st.goal != null && st.fb != null && st.lv != null;
-  $('#res').hidden = !done; if (!done) return;
-  const x = st.what.trim() || 'それ';
-  const mk = v => v === 2 ? '○' : v === 1 ? '△' : '×';
-  const rows = [
-    ['目標', mk(st.goal), st.goal === 2 ? 'はっきりしています。' : FIX.goal[1]],
-    ['手ごたえ', mk(st.fb), st.fb === 2 ? 'その場でわかっています。' : FIX.fb[1]],
-    ['難しさ', st.lv === 'ok' ? '○' : '×', st.lv === 'ok' ? 'つり合っています。' : FIX[st.lv][1]]
-  ];
-  $('#marks').innerHTML = rows.map(r => '<li><b>' + r[1] + '</b><span>' + r[0] + '<small>' + r[2] + '</small></span></li>').join('');
-  // いちばん弱い条件を1つ選ぶ（難しさのずれ → 目標 → 手ごたえ の順）
-  let weak = null;
-  if (st.lv !== 'ok') weak = st.lv;
-  if (st.goal < 2 && (weak === null || st.goal === 0)) weak = 'goal';
-  if (weak === null && st.fb < 2) weak = 'fb';
-  if (weak === null) {
-    $('#head').textContent = '3つの条件は、そろっています';
-    $('#todo').textContent = '「' + x + '」は、条件がそろっています。\n足りないのは、たぶん時間です。明日のワークで、やる時間を先に決めます。今日は15分だけやる。';
-  } else {
-    $('#head').textContent = '足りないのは「' + FIX[weak][0] + '」です';
-    $('#todo').textContent = '次に「' + x + '」をやるとき、ここを1つだけ変える。\n' + FIX[weak][1] + '\n終わった直後に、0〜10で点数をつける。';
-  }
+const PRE = [['動画・配信', 'p'], ['SNS', 'p'], ['ゲーム', 'p'], ['漫画・読書', 'p'], ['ゴロゴロ・二度寝', 'p'], ['買い物', 'p'],
+  ['運動・散歩', 'a'], ['料理', 'a'], ['つくる（絵・文章・音楽・工作）', 'a'], ['練習（楽器・語学・勉強）', 'a'], ['人と会う・話す', 'a']];
+const TO = ['散歩', '料理', '絵', '文章', '楽器', '工作', '筋トレ', '勉強'];
+let st = store.get('w3', null) || { rows: PRE.map(([n, k]) => ({ n, k, h: 0 })), to: '散歩' };
+const fmt = h => (h % 1 ? h.toFixed(1) : String(h)) + '時間';
+
+function drawRows(){
+  $('#rows').innerHTML = st.rows.map((r, i) =>
+    '<div class="rowx" data-i="' + i + '"><span>' + esc(r.n) + '</span>' +
+    '<button type="button" class="kind" data-k="' + r.k + '" aria-label="' + esc(r.n) + 'は' + (r.k === 'a' ? '能動' : '受動') + '。押すと切り替え">' + (r.k === 'a' ? '能動' : '受動') + '</button>' +
+    '<span class="stp"><button type="button" data-d="-0.5" aria-label="' + esc(r.n) + 'を30分減らす">−</button><output>' + fmt(r.h) + '</output><button type="button" data-d="0.5" aria-label="' + esc(r.n) + 'を30分増やす">＋</button></span></div>').join('');
 }
-function save(){ store.set('d3', st); draw(); }
-$('#what').value = st.what;
-$('#what').addEventListener('input', e => { st.what = e.target.value; save(); });
-$$('.opts[data-q]').forEach(g => g.addEventListener('click', e => {
-  const b = e.target.closest('.opt'); if (!b) return;
-  const v = b.dataset.v; st[g.dataset.q] = g.dataset.q === 'lv' ? v : Number(v); save();
-  if (!$('#res').hidden && g.dataset.q === 'lv') $('#res').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-}));
+function drawRes(){
+  const total = st.rows.reduce((s, r) => s + r.h, 0);
+  const act = st.rows.filter(r => r.k === 'a').reduce((s, r) => s + r.h, 0);
+  $('#empty').hidden = total > 0; $('#filled').hidden = total === 0;
+  if (!total) return;
+  const pct = Math.round(act / total * 100);
+  $('#pct').textContent = pct; $('#mt').style.width = pct + '%';
+  $('#sum').textContent = '自由時間' + fmt(total) + 'のうち、能動が' + fmt(act) + '、受動が' + fmt(total - act) + 'でした。';
+  $('#read').textContent = pct < 20 ? 'ほとんどが、受け取る時間でした。休日が終わって何も残らない感じは、ここから来ているかもしれません。全部を変える必要はありません。15分だけ入れ替えます。'
+    : pct < 50 ? '受け取る時間のほうが多めです。全部を変える必要はありません。15分だけ入れ替えます。'
+    : '半分以上が、自分で動かした時間でした。それでも残らないなら、原因は時間の量ではなさそうです。1日目の「没頭の3条件」で、中身のほうを点検してみてください。';
+  const from = st.rows.filter(r => r.k === 'p' && r.h > 0).sort((x, y) => y.h - x.h)[0];
+  $('#todo').textContent = from
+    ? '来週末は、「' + from.n + '」の' + fmt(from.h) + 'のうち15分だけを、' + st.to + 'に入れ替える。\n終わった直後に、0〜10で点数をつける。'
+    : '来週末も、' + st.to + 'を15分。\n終わった直後に、0〜10で点数をつける。';
+}
+function save(){ store.set('w3', st); drawRes(); }
+$('#rows').addEventListener('click', e => {
+  const row = e.target.closest('.rowx'); if (!row) return; const r = st.rows[row.dataset.i];
+  const k = e.target.closest('.kind'), b = e.target.closest('[data-d]');
+  if (k) { r.k = r.k === 'a' ? 'p' : 'a'; drawRows(); save(); }
+  else if (b) { r.h = Math.max(0, Math.min(48, r.h + Number(b.dataset.d))); $('output', row).textContent = fmt(r.h); save(); }
+});
+$('#addBtn').addEventListener('click', () => {
+  const v = $('#addName').value.trim(); if (!v) return;
+  st.rows.push({ n: v, k: 'p', h: 0.5 }); $('#addName').value = ''; drawRows(); save();
+});
+chipGroup($('#toChips'), TO, st.to, v => { st.to = v; save(); });
 $('#copy').addEventListener('click', () => copyText($('#todo').textContent, $('#msg')));
-draw();
+drawRows(); drawRes();
 </script>
 <footer>
   <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>

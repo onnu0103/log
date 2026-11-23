@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>「もし〜なら、〜する」を1つ作る｜自由時間の正体</title>
+<title>意志の罠をほどく：「もし〜なら、〜する」を作る｜自由時間の正体</title>
 <meta name="description" content="やりたいことを15分だけ始めるための、きっかけと行動を結ぶ一文を作るワークです。">
-<meta property="og:title" content="「もし〜なら、〜する」を1つ作る">
+<meta property="og:title" content="意志の罠をほどく：「もし〜なら、〜する」を作る">
 <meta property="og:description" content="やりたいことを15分だけ始めるための、きっかけと行動を結ぶ一文を作るワークです。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
@@ -93,6 +93,15 @@ textarea{min-height:76px;resize:vertical}
 .cta .btn{width:100%}
 .addrow{display:flex;gap:8px;margin-top:10px}
 .addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
@@ -127,16 +136,16 @@ function chipGroup(el, items, value, onPick){
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">自由時間の正体・4日目</p>
+  <p class="lab">罠その4｜意志の罠</p>
   <h1>「もし〜なら、〜する」を1つ作る</h1>
   <p class="lead">「時間ができたらやろう」の時間は、なかなか来ません。きっかけと行動を、先に結びつけておきます。</p>
-  <span class="pill">約2分</span>
+  <span class="pill">4日目・約2分</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
 <section class="card">
   <h2>今日の考え方</h2>
-  <p>「やろう」と思うだけより、「<b>もし◯◯したら、△△する</b>」と、きっかけと行動をセットで決めておくほうが、実行しやすくなります。</p>
-  <p>「実行意図」と呼ばれる方法で、90を超える研究をまとめた分析でも、目標の達成を後押しする効果が報告されています。意志の強さではなく、段取りの話です。</p>
+  <p>「時間ができたらやろう」と思っていることが、ずっとそのままになっている。足りないのは意志ではなく、段取りです。</p>
+  <p>「やろう」と思うだけより、「<b>もし◯◯したら、△△する</b>」と、きっかけと行動をセットで決めておくほうが、実行しやすくなります。「実行意図」と呼ばれる方法で、90を超える研究をまとめた分析でも、目標の達成を後押しする効果が報告されています。</p>
   <p class="src">参考：Gollwitzer (1999)、Gollwitzer & Sheeran (2006)</p>
 </section>
 
@@ -168,7 +177,7 @@ function chipGroup(el, items, value, onPick){
 const CUE = ['土曜の朝ごはんを食べ終えたら', '日曜の昼ごはんを食べ終えたら', '平日、家に帰って手を洗ったら', 'お風呂から出たら', 'スマホを充電器に置いたら'];
 const ACT = ['絵を描く', '文章を書く', '楽器を弾く', '散歩する', '料理する', '勉強する', '筋トレする', '何もせず休む'];
 const ALT = [['疲れていたら', '5分だけやる'], ['疲れていたら', '道具を出すところまでやる'], ['予定が入ったら', '次の日の同じきっかけに回す']];
-let st = store.get('d4', null) || { cue: '', act: '', alt: 0 };
+let st = store.get('w4', null) || { cue: '', act: '', alt: 0 };
 
 function draw(){
   const ok = st.cue && st.act;
@@ -176,7 +185,7 @@ function draw(){
   const a = ALT[st.alt];
   $('#todo').textContent = 'もし' + st.cue + '、15分だけ' + st.act + '。\nもし' + a[0] + '、' + a[1] + '。';
 }
-function save(){ store.set('d4', st); draw(); }
+function save(){ store.set('w4', st); draw(); }
 function optGroup(el, labels, isOn, onPick){
   el.innerHTML = labels.map((t, i) => '<button type="button" class="opt" data-i="' + i + '" aria-pressed="' + isOn(i) + '">' + esc(t) + '</button>').join('');
   el.addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return;

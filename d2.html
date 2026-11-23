@@ -6,10 +6,10 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>飽きた楽しみを「ちょい変え」する｜自由時間の正体</title>
-<meta name="description" content="前ほど楽しくなくなった楽しみを、条件を1つだけ変えて試すためのワークです。">
-<meta property="og:title" content="飽きた楽しみを「ちょい変え」する">
-<meta property="og:description" content="前ほど楽しくなくなった楽しみを、条件を1つだけ変えて試すためのワークです。">
+<title>予測の罠をほどく：予想外を1つ仕込む｜自由時間の正体</title>
+<meta name="description" content="うまくいっても嬉しくない理由と、いつもの楽しみに予想外を1つ足すワークです。">
+<meta property="og:title" content="予測の罠をほどく：予想外を1つ仕込む">
+<meta property="og:description" content="うまくいっても嬉しくない理由と、いつもの楽しみに予想外を1つ足すワークです。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
 @media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
@@ -93,6 +93,15 @@ textarea{min-height:76px;resize:vertical}
 .cta .btn{width:100%}
 .addrow{display:flex;gap:8px;margin-top:10px}
 .addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
@@ -127,17 +136,17 @@ function chipGroup(el, items, value, onPick){
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">自由時間の正体・2日目</p>
-  <h1>飽きた楽しみを「ちょい変え」する</h1>
-  <p class="lead">楽しみを増やさずに、条件を1つだけ変えます。いつもの楽しみと、変えるところを選んでください。</p>
-  <span class="pill">約2分</span>
+  <p class="lab">罠その2｜予測の罠</p>
+  <h1>いつもの楽しみに、予想外を1つ仕込む</h1>
+  <p class="lead">楽しみを増やさずに、条件を1つだけ変えます。先が読めない要素が入ると、同じことが別の体験になります。</p>
+  <span class="pill">2日目・約2分</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
 <section class="card">
   <h2>今日の考え方</h2>
-  <p>同じ楽しみをくり返すと、同じ量では満たされにくくなります。「快楽適応」と呼ばれるしくみです。</p>
-  <p>慣れを遅らせるのは、量を増やすことではなく<b>変化</b>だとされています。楽しい体験は、途中で区切ったほうが楽しさが保たれた、という実験もあります。</p>
-  <p class="src">参考：Sheldon & Lyubomirsky (2012)、Nelson & Meyvis (2008)</p>
+  <p>勝っても、うまくいっても、「まあそうだよね」としか思わない。脳の報酬のしくみは、結果そのものより<b>予想とのずれ</b>に強く反応することがわかっています。予想どおりの成功には、反応が弱くなります。</p>
+  <p>同じ楽しみをくり返すと満たされにくくなる「快楽適応」も重なります。効くのは量を増やすことではなく、<b>変化</b>です。楽しい体験は、途中で区切ったほうが楽しさが保たれた、という実験もあります。</p>
+  <p class="src">参考：Schultz ほか (1997)、Sheldon & Lyubomirsky (2012)、Nelson & Meyvis (2008)</p>
 </section>
 
 <section class="card">
@@ -151,7 +160,7 @@ function chipGroup(el, items, value, onPick){
 </section>
 
 <section class="card res" id="res" hidden>
-  <p class="note">今回のちょい変え</p>
+  <p class="note">今回の予想外</p>
   <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
   <p id="why" class="note"></p>
   <h3>いつやりますか</h3>
@@ -180,7 +189,7 @@ const LEVER = {
     v: ['{x}を、だれかと一緒にやる。むずかしければ、終わったあと1人に感想を話す。', '{x}について、「これ良かった」を1人に送る。'] }
 };
 const WHEN = ['今夜', '明日', '次の休み'];
-let st = store.get('d2', null) || { x: '', lever: '', n: 0, when: '今夜' };
+let st = store.get('w2', null) || { x: '', lever: '', n: 0, when: '今夜' };
 
 function draw(){
   const ok = st.x && st.lever;
@@ -190,7 +199,7 @@ function draw(){
   $('#todo').textContent = st.when + '、' + line + '\n終わった直後に、0〜10で点数をつける。';
   $('#why').textContent = L.why;
 }
-function save(){ store.set('d2', st); draw(); }
+function save(){ store.set('w2', st); draw(); }
 chipGroup($('#what'), WHAT, st.x, v => { st.x = v; $('#whatFree').value = ''; save(); });
 $('#whatFree').value = WHAT.includes(st.x) ? '' : st.x;
 $('#whatFree').addEventListener('input', e => {

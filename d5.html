@@ -6,9 +6,9 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>うまくいったことを、4つの問いで分解する｜自由時間の正体</title>
+<title>達成の罠をほどく：4つの問いで分解する｜自由時間の正体</title>
 <meta name="description" content="過去にうまくいったことを4つの問いで分解し、自分が満たされる条件を取り出すワークです。">
-<meta property="og:title" content="うまくいったことを、4つの問いで分解する">
+<meta property="og:title" content="達成の罠をほどく：4つの問いで分解する">
 <meta property="og:description" content="過去にうまくいったことを4つの問いで分解し、自分が満たされる条件を取り出すワークです。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
@@ -93,6 +93,15 @@ textarea{min-height:76px;resize:vertical}
 .cta .btn{width:100%}
 .addrow{display:flex;gap:8px;margin-top:10px}
 .addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
@@ -127,17 +136,17 @@ function chipGroup(el, items, value, onPick){
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">自由時間の正体・5日目</p>
+  <p class="lab">罠その5｜達成の罠</p>
   <h1>うまくいったことを、4つの問いで分解する</h1>
   <p class="lead">過去の成果を1つ選びます。見るのは「結果」ではなく、その途中にあった「満たされた瞬間」です。</p>
-  <span class="pill">約5分</span>
+  <span class="pill">5日目・約5分</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
 <section class="card">
   <h2>今日の考え方</h2>
-  <p>結果を出したのに、思ったほど満たされなかった。そういう経験があるなら、満たされた場所は「結果」とは別のところにあります。</p>
-  <p>自分の興味や価値観に合った目標は、続きやすく、達成したときの満足にもつながりやすいとされています。4つの問いは、その「自分に合っていた部分」を取り出すためのものです。</p>
-  <p class="src">参考：自己一致モデル（Sheldon & Elliot, 1999）</p>
+  <p>資格、昇進、ランク。届いたのに「こんなもんか」で終わった。人は、達成したときの喜びの強さと長さを、多めに見積もることがわかっています。大学教員の昇進審査では、通った人と通らなかった人の幸福度の差は、予想されていたよりずっと小さかったと報告されています。</p>
+  <p>満たされた場所は、「結果」とは別のところにあることがあります。4つの問いは、途中にあった「自分に合っていた部分」を取り出すためのものです。</p>
+  <p class="src">参考：Gilbert ほか (1998)、自己一致モデル（Sheldon & Elliot, 1999）</p>
 </section>
 
 <section class="card">
@@ -187,11 +196,11 @@ function chipGroup(el, items, value, onPick){
     <li>収入や売上を約束するものではありません</li>
   </ul>
   <a class="btn primary" href="https://forms.gle/Jqy6ZnTNFqxu7j71A" rel="noopener" target="_blank">事前アンケートに答える（約5分）</a>
-  <p class="note" style="margin-top:10px!important;color:inherit">合わない方は、このままページを閉じてください。明日からも、いつもどおりワークが届きます。</p>
+  <p class="note" style="margin-top:10px!important;color:inherit">合わない方は、このままページを閉じてください。明日からも、いつもどおり罠のワークが届きます。</p>
 </section>
 
 <script>
-let st = store.get('d5', null) || { item: '', why: '', peak: '', empty: '', ruler: '', re: '' };
+let st = store.get('w5', null) || { item: '', why: '', peak: '', empty: '', ruler: '', re: '' };
 const READ = {
   me: '物差しは、自分のものでした。空になったのは物差しのせいではなく、「次の段階」がなかったからかもしれません。',
   half: '物差しは、半分が自分・半分が他人でした。満たされた瞬間と空になった瞬間が、それぞれどちらの物差しの側にあったかを見比べてください。',
@@ -208,7 +217,7 @@ function draw(){
     ? '今週、15分だけ「' + st.re.trim() + '」。\n終わった直後に、0〜10で点数をつける。'
     : '上の欄に、問い2の瞬間を15分で再現する方法を1つ書く。';
 }
-function save(){ store.set('d5', st); draw(); }
+function save(){ store.set('w5', st); draw(); }
 ['item', 'why', 'peak', 'empty', 're'].forEach(k => { $('#' + k).value = st[k]; $('#' + k).addEventListener('input', e => { st[k] = e.target.value; save(); }); });
 $('#ruler').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return; st.ruler = b.dataset.v; save(); });
 $('#copy').addEventListener('click', () => copyText(

@@ -6,10 +6,10 @@
 <meta name="robots" content="noindex">
 <meta name="format-detection" content="telephone=no">
 <meta name="theme-color" content="#ECD7AA">
-<title>「なんか楽しいことないかな」の正体チェック｜自由時間の正体</title>
-<meta name="description" content="休日が終わって何も残らない。その原因を4つに分けて、いちばん効いているものと今夜の一手を出します。">
-<meta property="og:title" content="「なんか楽しいことないかな」の正体チェック">
-<meta property="og:description" content="休日が終わって何も残らない。その原因を4つに分けて、いちばん効いているものと今夜の一手を出します。">
+<title>ページが新しくなりました｜自由時間の正体</title>
+<meta name="description" content="新しいページへ移動します。">
+<meta property="og:title" content="ページが新しくなりました">
+<meta property="og:description" content="新しいページへ移動します。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
 <style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
 @media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
@@ -93,6 +93,15 @@ textarea{min-height:76px;resize:vertical}
 .cta .btn{width:100%}
 .addrow{display:flex;gap:8px;margin-top:10px}
 .addrow input{margin-top:0;flex:1}
+.tno{font-size:12px!important;font-weight:700;color:var(--red);margin:0 0 2px!important}
+.trap h2{font-size:20px;margin-bottom:6px}
+.sym{font-weight:700;font-size:16px!important;border-left:4px solid var(--kraft);padding-left:10px}
+.trap h3{margin:10px 0 2px;font-size:13px;color:var(--sub)}
+.tick{width:100%;margin-top:4px}
+.tick[aria-pressed=true]{background:var(--ink);color:var(--on-ink);border-color:var(--ink)}
+.trap.on{border:2px solid var(--ink)}
+.float{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25);white-space:nowrap}
+.float.gone{display:none}
 footer{font-size:12px;color:var(--sub);margin-top:22px}
 footer p{margin:0 0 8px}
 footer a{color:var(--sub)}
@@ -127,153 +136,14 @@ function chipGroup(el, items, value, onPick){
 <body>
 <div class="wrap">
 <header>
-  <p class="lab">自由時間の正体・はじめに</p>
-  <h1>「なんか楽しいことないかな」の正体チェック</h1>
-  <p class="lead">12の質問に、いまの感覚で答えてください。あなたの自由時間でいちばん効いている原因と、今夜15分でできる一手が出ます。</p>
-  <span class="pill">12問・約3分</span>
+  <p class="lab">お知らせ</p>
+  <h1>ページが新しくなりました</h1>
+  <p class="lead">下のリンクから、新しいページへ進んでください。</p>
+  <span class="pill">移動します</span>
 </header>
 <noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
-<section class="card" id="quiz" aria-live="polite">
-  <div class="prog"><span id="qNo">1 / 12</span><button type="button" class="link" id="back" hidden>1つ戻る</button></div>
-  <div class="track"><b id="qBar" style="width:0%"></b></div>
-  <p class="qtext" id="qText"></p>
-  <div class="opts" id="qOpts"></div>
-  <p class="note" style="margin-top:12px!important">深く考えず、最近1か月の感覚で選んでください。</p>
-</section>
-
-<section class="card res" id="result" hidden>
-  <p class="note" id="rLab">あなたの結果</p>
-  <h2 id="rHead"></h2>
-  <p id="rWhat"></p>
-  <div class="todo"><b>今夜の15分</b><p id="rTonight"></p></div>
-  <p class="note">終わった直後に、「何が残ったか」を0〜10でつけてください。DMでお渡しした<a href="./">7日分の記録シート</a>に書けます。</p>
-  <h3>やらなくていいこと</h3>
-  <p id="rSkip"></p>
-  <p id="rCare" class="note" hidden>眠れない日や気分の落ち込みが2週間以上続くときは、無理をせず医療機関に相談してください。</p>
-  <h3>4つの原因の出かた</h3>
-  <div class="bars" id="rBars"></div>
-  <p class="note" id="rTie" hidden></p>
-  <p class="src" id="rSrc"></p>
-  <div class="actions">
-    <a class="btn primary" id="rSend" href="#" rel="noopener">結果をLINEで送る</a>
-  </div>
-  <p class="note" style="margin-top:8px!important">送ると、タイプに合わせた一言がすぐに届きます。うまく開かないときは、LINEのトークで「<span id="rKey"></span>」とだけ送ってください。</p>
-  <div class="actions">
-    <button type="button" class="btn" id="rCopy">結果をコピー</button>
-    <button type="button" class="btn" id="rAgain">もう一度やる</button>
-  </div>
-  <p class="msg" id="rMsg" role="status"></p>
-</section>
-
-<section class="card" id="next" hidden>
-  <h2>このあと届くもの</h2>
-  <p>明日から10日間、毎晩20時ごろに、3分ほどで試せるワークがLINEに1つずつ届きます。</p>
-  <p id="nFit"></p>
-</section>
-
-<script>
-const Q = [
-  ['a', '好きだったはずの動画やゲームが、前ほど楽しくない'],
-  ['b', '休日は「見る・読む・流す」がほとんどで、自分で何かを作ったり動かしたりする時間は少ない'],
-  ['c', '何かを始めるとき、「役に立つか」「人にどう見えるか」を先に考える'],
-  ['d', '休日は、まず寝て終わることが多い'],
-  ['a', '休みの日の過ごし方が、だいたい毎回同じだ'],
-  ['b', '気づいたらスマホを開いていて、何を見たか思い出せないことがある'],
-  ['c', '目標や結果を達成したのに、思ったほど満たされなかったことがある'],
-  ['d', '休みの日も、仕事のことが頭から離れない'],
-  ['a', '楽しんでいる時間より、「次は何を見よう・何をしよう」と探している時間のほうが長い'],
-  ['b', '休日の終わりに、「今日はこれをした」と人に話せることがあまりない'],
-  ['c', '好きなことを聞かれると、「これといってない」と答えてしまう'],
-  ['d', 'やりたい気持ちはあるのに、始める元気が残っていない']
-];
-const OPT = [['あてはまる', 3], ['少しあてはまる', 2], ['あまりない', 1], ['あてはまらない', 0]];
-const ORDER = ['d', 'b', 'a', 'c'];  // 同点のときは、土台に近いものを先に出す
-const T = {
-  a: { key: '慣れ', name: '慣れ', head: 'いちばん効いているのは「慣れ」です',
-       what: '同じ楽しみをくり返すと、同じ量では満たされにくくなります。心理学では「快楽適応」と呼ばれるしくみです。あなたの楽しみが悪いのではありません。足りないのは新しい趣味ではなく、「変化」です。',
-       tonight: 'いつもの楽しみを、条件を1つだけ変えて15分やる。\n（場所を変える／15分で区切る／いつもと逆のジャンルを選ぶ）',
-       skip: '新しい趣味を探して、道具をそろえること。',
-       fit: 'あなたには、2日目に届く「ちょい変え」のワークがいちばん合うと思います。',
-       src: '参考：快楽適応（Brickman & Campbell, 1971 ほか）' },
-  b: { key: '受け身', name: '受け身の時間', head: 'いちばん効いているのは「受け身の時間」です',
-       what: '見る・流すが中心の時間は、楽に始められるかわりに、終わったあとに残りにくいと言われています。日々の体験を記録する研究でも、自分で手を動かす余暇のほうが、没頭や充実が高く報告されています。',
-       tonight: '15分だけ手を動かして、何かを1つ作る。\n（メモ3行／落書き1枚／料理1品／写真1枚）',
-       skip: 'スマホの時間をゼロにしようとすること。15分入れ替えるだけで十分です。',
-       fit: 'あなたには、1日目に届く「能動時間をかぞえる」ワークがいちばん合うと思います。いまの割合が数字で見えます。',
-       src: '参考：体験サンプリング法による余暇の研究（Csikszentmihalyi ほか）' },
-  c: { key: '物差し', name: '借りものの物差し', head: 'いちばん効いているのは「借りものの物差し」です',
-       what: '「役に立つか」「評価されるか」で選んだことは、達成しても満たされにくいことがあります。自分の興味や価値観に合った目標のほうが、続きやすく、満足につながりやすいという研究があります。',
-       tonight: '「誰にも見せない・何の役にも立たない」と決めて、15分だけ好きにやる。',
-       skip: '「本当にやりたいこと」を、頭の中だけで探しつづけること。',
-       fit: 'あなたには、5日目に届く「うまくいったことを分解する」ワークがいちばん合うと思います。',
-       src: '参考：自己決定理論（Deci & Ryan）、自己一致モデル（Sheldon & Elliot, 1999）' },
-  d: { key: '回復', name: '回復不足', head: 'いまは「回復」が先です',
-       what: '疲れが抜けていないと、何をしても残りにくくなります。休み方の研究では、仕事から頭を離すこと（心理的な切り離し）が、回復に関わるとされています。やる気や性格の問題ではありません。',
-       tonight: '新しいことは足さない。\n仕事の通知を切って15分、歩くか湯船につかる。',
-       skip: '休日に予定を詰めこむこと。まず1つ減らします。',
-       fit: 'あなたには、4日目に届く「もし〜なら、〜する」のワークがいちばん合うと思います。休む時間を先に決められます。',
-       src: '参考：リカバリー経験（Sonnentag & Fritz, 2007）' },
-  n: { key: '結果', name: '', head: '大きな引っかかりは、見当たりませんでした',
-       what: '4つの原因は、どれも強くは出ていません。それでも「何も残らない」と感じるなら、原因はもっと細かいところにあります。7日分の記録で見るのが近道です。',
-       tonight: '今夜やったことを1つ選び、終わった直後に0〜10で点数をつける。',
-       skip: '原因を頭の中で考えつづけること。',
-       fit: '1日目に届く「能動時間をかぞえる」ワークから、順に試してみてください。',
-       src: '' }
-};
-let ans = store.get('check', []);
-let i = Math.min(ans.length, Q.length);
-
-function scores(){
-  const s = { a: 0, b: 0, c: 0, d: 0 };
-  Q.forEach(([t], n) => { s[t] += ans[n] || 0; });
-  return s;
-}
-function showQ(){
-  $('#quiz').hidden = false; $('#result').hidden = true; $('#next').hidden = true;
-  $('#qNo').textContent = (i + 1) + ' / ' + Q.length;
-  $('#qBar').style.width = (i / Q.length * 100) + '%';
-  $('#qText').textContent = Q[i][1];
-  $('#back').hidden = i === 0;
-  $('#qOpts').innerHTML = OPT.map(([t, v]) => '<button type="button" class="opt" data-v="' + v + '" aria-pressed="' + (ans[i] === v) + '">' + t + '</button>').join('');
-}
-function showR(){
-  const s = scores();
-  const max = Math.max(s.a, s.b, s.c, s.d);
-  const tops = ORDER.filter(k => s[k] === max);
-  const top = max <= 3 ? 'n' : tops[0];
-  const t = T[top];
-  $('#quiz').hidden = true; $('#result').hidden = false; $('#next').hidden = false;
-  $('#rHead').textContent = t.head;
-  $('#rWhat').textContent = t.what;
-  $('#rTonight').textContent = t.tonight;
-  $('#rSkip').textContent = t.skip;
-  $('#rCare').hidden = !(top === 'd' || s.d >= 6);
-  $('#rSrc').textContent = t.src; $('#rSrc').hidden = !t.src;
-  $('#rBars').innerHTML = ['a', 'b', 'c', 'd'].map(k =>
-    '<div class="bar' + (k === top ? ' top' : '') + '"><span>' + T[k].name + '</span><i><b style="width:' + (s[k] / 9 * 100) + '%"></b></i><span>' + s[k] + '/9</span></div>').join('');
-  const tie = $('#rTie');
-  if (top !== 'n' && tops.length > 1) {
-    tie.hidden = false;
-    tie.textContent = '「' + tops.map(k => T[k].name).join('」と「') + '」が同じ点でした。土台に近いほうから先に出しています。';
-  } else tie.hidden = true;
-  $('#rKey').textContent = t.key;
-  $('#rSend').href = lineLink(t.key);
-  $('#nFit').textContent = t.fit;
-  $('#rMsg').textContent = '';
-  window.__resultText = '【正体チェックの結果】\n' + t.head + '\n\n今夜の15分：\n' + t.tonight + '\n\nやらなくていいこと：' + t.skip +
-    '\n\n慣れ ' + s.a + '/9、受け身 ' + s.b + '/9、物差し ' + s.c + '/9、回復不足 ' + s.d + '/9';
-}
-$('#qOpts').addEventListener('click', e => {
-  const b = e.target.closest('.opt'); if (!b) return;
-  ans[i] = Number(b.dataset.v); ans.length = Math.max(ans.length, i + 1); store.set('check', ans);
-  $$('.opt', $('#qOpts')).forEach(x => x.setAttribute('aria-pressed', x === b));
-  setTimeout(() => { i++; if (i >= Q.length) { showR(); window.scrollTo(0, 0); } else showQ(); }, 160);
-});
-$('#back').addEventListener('click', () => { if (i > 0) { i--; showQ(); } });
-$('#rCopy').addEventListener('click', () => copyText(window.__resultText, $('#rMsg')));
-$('#rAgain').addEventListener('click', () => { ans = []; i = 0; store.del('check'); showQ(); window.scrollTo(0, 0); });
-if (i >= Q.length) showR(); else showQ();
-</script>
+<p class="card"><a href="wana10.html">能力の高いあなたが陥る罠10選</a> へ進む</p>
+<script>location.replace('wana10.html');</script>
 <footer>
   <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>
   <p>このページは、考えるきっかけのためのワークです。心理検査や診断、医療の助言ではありません。</p>
