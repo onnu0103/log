@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ECD7AA">
+<title>うまくいったことを、4つの問いで分解する｜自由時間の正体</title>
+<meta name="description" content="過去にうまくいったことを4つの問いで分解し、自分が満たされる条件を取り出すワークです。">
+<meta property="og:title" content="うまくいったことを、4つの問いで分解する">
+<meta property="og:description" content="過去にうまくいったことを4つの問いで分解し、自分が満たされる条件を取り出すワークです。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ECD7AA'/%3E%3Ccircle cx='32' cy='32' r='17' fill='none' stroke='%23CF3A20' stroke-width='6'/%3E%3C/svg%3E">
+<style>:root{--bg:#FBF7EF;--card:#fff;--ink:#1D1B16;--sub:#6E6757;--line:#E2D9C6;--kraft:#ECD7AA;--kraft-ink:#3A2D14;--red:#CF3A20;--chip:#F4EBD8;--focus:#2E6BD6;--on-ink:#FBF7EF}
+@media (prefers-color-scheme:dark){:root{--bg:#171512;--card:#24211C;--ink:#F3EEE4;--sub:#B5AC9A;--line:#3A352C;--kraft:#4A3D22;--kraft-ink:#F3E3BE;--red:#FF7A5C;--chip:#302B23;--focus:#8DB4FF;--on-ink:#171512}}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP",Meiryo,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px calc(36px + env(safe-area-inset-bottom))}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+header{background:var(--kraft);color:var(--kraft-ink);border-radius:20px;padding:18px 18px 16px;margin:0 0 14px}
+.lab{margin:0;font-size:13px;font-weight:700;opacity:.85}
+h1{margin:4px 0 8px;font-size:25px;line-height:1.35;font-weight:900}
+.lead{margin:0;font-size:15px}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;background:rgba(0,0,0,.09);margin:10px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px}
+h2{font-size:18px;margin:0 0 10px;line-height:1.45}
+h3{font-size:15px;margin:14px 0 6px}
+.card p{margin:0 0 10px;font-size:15px}
+.card p:last-child{margin-bottom:0}
+.card a:not(.btn){color:inherit}
+.card ul{margin:0 0 10px;padding-left:1.2em;font-size:15px}
+.src{font-size:12px!important;color:var(--sub)}
+.note{font-size:13px!important;color:var(--sub)}
+.f{display:block;font-weight:700;font-size:14px;margin:0 0 14px}
+.f small{display:block;font-weight:400;color:var(--sub);font-size:13px;margin-top:2px}
+input[type=text],textarea{display:block;width:100%;margin-top:6px;font:inherit;font-size:16px;padding:12px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink)}
+textarea{min-height:76px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 12px}
+.chip{font:inherit;font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--chip);color:var(--ink);min-height:40px}
+.chip[aria-pressed=true],.opt[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--on-ink)}
+.q{margin:0 0 16px;padding:0;border:0;min-width:0}
+.q legend{font-weight:700;font-size:15px;margin:0 0 8px;padding:0;line-height:1.55}
+.opts{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.opts.one{grid-template-columns:1fr}
+.opts.three{grid-template-columns:repeat(3,1fr)}
+.opts.three .opt{font-size:13px;padding:8px 4px}
+.opt{font:inherit;font-size:14px;font-weight:700;min-height:48px;padding:8px 10px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);line-height:1.35}
+.prog{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--sub);margin:0 0 8px}
+.track{height:6px;border-radius:3px;background:var(--chip);overflow:hidden;margin:0 0 14px}
+.track b{display:block;height:100%;background:var(--red);transition:width .2s}
+.qtext{font-size:18px!important;font-weight:700;line-height:1.6;min-height:5.2em;margin:0 0 12px!important}
+.link{font:inherit;font-size:14px;background:none;border:0;padding:8px 0;color:var(--sub);text-decoration:underline}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{font:inherit;font-weight:700;font-size:16px;min-height:48px;padding:10px 18px;border-radius:14px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;text-decoration:none;text-align:center}
+.primary{background:var(--ink);color:var(--on-ink);border-color:var(--ink);flex:1}
+.msg{min-height:1.6em;margin:8px 0 0!important;font-size:14px!important;color:var(--sub)}
+.res{border:2px solid var(--ink)}
+.res h2{font-size:21px}
+.todo{background:var(--kraft);color:var(--kraft-ink);border-radius:14px;padding:14px;margin:12px 0}
+.todo b{display:block;font-size:13px;margin-bottom:4px}
+.todo p{margin:0!important;font-size:16px!important;font-weight:700;line-height:1.65;white-space:pre-wrap}
+.bars{margin:12px 0}
+.bar{display:grid;grid-template-columns:8.5em 1fr 2.4em;gap:8px;align-items:center;font-size:13px;margin:0 0 6px}
+.bar i{display:block;height:10px;border-radius:5px;background:var(--chip);overflow:hidden}
+.bar i b{display:block;height:100%;background:var(--sub);border-radius:5px}
+.bar.top i b{background:var(--red)}
+.bar.top span:first-child{font-weight:700}
+.bar span:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.rowx{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line);font-size:14px}
+.rowx:first-child{border-top:0}
+.kind{font:inherit;font-size:12px;font-weight:700;min-height:38px;min-width:54px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);color:var(--sub)}
+.kind[data-k=a]{background:var(--red);border-color:var(--red);color:#fff}
+.stp{display:flex;align-items:center;gap:4px}
+.stp button{font:inherit;font-size:20px;font-weight:700;width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);line-height:1}
+.stp output{min-width:3.4em;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.big{font-size:32px!important;font-weight:900;line-height:1.25;margin:4px 0!important}
+.big small{font-size:15px;font-weight:700;margin-left:4px}
+.meter{height:16px;border-radius:8px;background:var(--chip);overflow:hidden;margin:8px 0 12px}
+.meter b{display:block;height:100%;background:var(--red)}
+.marks{list-style:none;padding:0!important;margin:0 0 12px!important}
+.marks li{display:grid;grid-template-columns:2em 1fr;gap:6px;padding:8px 0;border-top:1px solid var(--line)}
+.marks li:first-child{border-top:0}
+.marks li>b{font-size:18px;text-align:center}
+.marks small{display:block;color:var(--sub);font-size:13px}
+.ans{border-left:4px solid var(--line);padding:2px 0 2px 12px;margin:0 0 12px}
+.ans b{display:block;font-size:13px;color:var(--sub)}
+.ans p{margin:0!important;white-space:pre-wrap}
+.cta{background:var(--kraft);color:var(--kraft-ink);border:0}
+.cta ul{font-size:13px}
+.cta .btn{width:100%}
+.addrow{display:flex;gap:8px;margin-top:10px}
+.addrow input{margin-top:0;flex:1}
+footer{font-size:12px;color:var(--sub);margin-top:22px}
+footer p{margin:0 0 8px}
+footer a{color:var(--sub)}
+@media print{.actions,.link,footer{display:none}}</style>
+<script>const $ = (s, r) => (r || document).querySelector(s);
+const $$ = (s, r) => [...(r || document).querySelectorAll(s)];
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const store = {
+  get(k, d){ try { const v = localStorage.getItem('jk_' + k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } },
+  set(k, v){ try { localStorage.setItem('jk_' + k, JSON.stringify(v)); return true; } catch (e) { return false; } },
+  del(k){ try { localStorage.removeItem('jk_' + k); } catch (e) {} }
+};
+async function copyText(text, msgEl){
+  let ok = false;
+  try { await navigator.clipboard.writeText(text); ok = true; } catch (e) {
+    const ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    try { ok = document.execCommand('copy'); } catch (_) {}
+    ta.remove();
+  }
+  if (msgEl) msgEl.textContent = ok ? 'コピーしました。メモやLINEに貼れます。' : 'コピーできませんでした。文を長押しして選んでください。';
+  return ok;
+}
+const lineLink = text => 'https://line.me/R/oaMessage/%40374gqpbg/?' + encodeURIComponent(text);
+// チップ（1つだけ選ぶ）。onPick(value) を呼ぶ
+function chipGroup(el, items, value, onPick){
+  el.innerHTML = items.map(t => '<button type="button" class="chip" aria-pressed="' + (t === value) + '">' + esc(t) + '</button>').join('');
+  el.onclick = e => { const b = e.target.closest('.chip'); if (!b) return;
+    $$('.chip', el).forEach(x => x.setAttribute('aria-pressed', x === b)); onPick(b.textContent); };
+}</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="lab">自由時間の正体・5日目</p>
+  <h1>うまくいったことを、4つの問いで分解する</h1>
+  <p class="lead">過去の成果を1つ選びます。見るのは「結果」ではなく、その途中にあった「満たされた瞬間」です。</p>
+  <span class="pill">約5分</span>
+</header>
+<noscript><p class="card">このページはJavaScriptを使います。ブラウザの設定でオンにしてください。</p></noscript>
+<section class="card">
+  <h2>今日の考え方</h2>
+  <p>結果を出したのに、思ったほど満たされなかった。そういう経験があるなら、満たされた場所は「結果」とは別のところにあります。</p>
+  <p>自分の興味や価値観に合った目標は、続きやすく、達成したときの満足にもつながりやすいとされています。4つの問いは、その「自分に合っていた部分」を取り出すためのものです。</p>
+  <p class="src">参考：自己一致モデル（Sheldon & Elliot, 1999）</p>
+</section>
+
+<section class="card">
+  <label class="f">分解する成果を1つ
+    <small>大きさは問いません。部活、資格、ゲーム、仕事、趣味。なんでも大丈夫です。</small>
+    <input type="text" id="item" maxlength="40" placeholder="例）ボウリングでアベレージ200">
+  </label>
+  <label class="f">問い1　始めた理由は？
+    <textarea id="why" maxlength="200" placeholder="例）友だちに誘われて。やってみたら点数が伸びるのがおもしろかった"></textarea>
+  </label>
+  <label class="f">問い2　いちばん満たされた瞬間は？
+    <small>結果が出た日とはかぎりません。練習中、準備中、だれかに話したとき。</small>
+    <textarea id="peak" maxlength="200" placeholder="例）投げ方を変えたら、狙ったところに行くようになった日"></textarea>
+  </label>
+  <label class="f">問い3　空になった瞬間は？
+    <small>達成した直後、評価されたあと、目標がなくなったとき。</small>
+    <textarea id="empty" maxlength="200" placeholder="例）200を超えた次の週。次に何を目指すのかわからなくなった"></textarea>
+  </label>
+  <fieldset class="q"><legend>問い4　そのときの物差しは、だれのものでしたか</legend>
+    <div class="opts three" id="ruler"><button type="button" class="opt" data-v="me">自分</button><button type="button" class="opt" data-v="half">半々</button><button type="button" class="opt" data-v="other">他人</button></div>
+    <p class="note" style="margin-top:8px!important">他人＝親、先生、会社、世間の基準。自分＝だれにも評価されなくても気になる基準。</p>
+  </fieldset>
+</section>
+
+<section class="card res" id="res" hidden>
+  <p class="note">分解の結果</p>
+  <h2 id="head"></h2>
+  <div class="ans"><b>満たされた瞬間</b><p id="aPeak"></p></div>
+  <div class="ans"><b>空になった瞬間</b><p id="aEmpty"></p></div>
+  <p id="read"></p>
+  <p>この2つのあいだに、あなたが満たされる条件があります。「結果」ではなく、問い2の瞬間に何があったかを見てください。自分で決めていた、上達が見えた、だれかと一緒だった、など。</p>
+  <label class="f">問い2の瞬間を、今週15分だけ再現するなら？
+    <input type="text" id="re" maxlength="40" placeholder="例）フォームを1つ決めて、動画に撮って見る">
+  </label>
+  <div class="todo"><b>今日の一歩</b><p id="todo"></p></div>
+  <div class="actions"><button type="button" class="btn primary" id="copy">分解をコピー</button></div>
+  <p class="msg" id="msg" role="status"></p>
+</section>
+
+<section class="card cta" id="cta" hidden>
+  <h2>この分解を、一緒にやる時間があります</h2>
+  <p>1人でやると、問い2で手が止まることがあります。60分の無料面談（Google Meet）では、この分解を一緒に進め、いまの時間の使い方と作りたいものを整理します。</p>
+  <ul>
+    <li>面談では、有料のプログラム「値札をつける26週」（モニター版100,000円・税込）のご案内もします</li>
+    <li>面談の場でお申し込みは受けません。受けたい場合は、翌日以降に書面を読んでから決めていただきます</li>
+    <li>お断りいただいたあと、こちらから重ねてご案内することはありません</li>
+    <li>収入や売上を約束するものではありません</li>
+  </ul>
+  <a class="btn primary" href="https://forms.gle/Jqy6ZnTNFqxu7j71A" rel="noopener" target="_blank">事前アンケートに答える（約5分）</a>
+  <p class="note" style="margin-top:10px!important;color:inherit">合わない方は、このままページを閉じてください。明日からも、いつもどおりワークが届きます。</p>
+</section>
+
+<script>
+let st = store.get('d5', null) || { item: '', why: '', peak: '', empty: '', ruler: '', re: '' };
+const READ = {
+  me: '物差しは、自分のものでした。空になったのは物差しのせいではなく、「次の段階」がなかったからかもしれません。',
+  half: '物差しは、半分が自分・半分が他人でした。満たされた瞬間と空になった瞬間が、それぞれどちらの物差しの側にあったかを見比べてください。',
+  other: 'この成果は、他人の物差しで測っていたようです。達成しても満たされにくいと言われる形です。それでも満たされた瞬間があったなら、そこにだけ自分の物差しがありました。'
+};
+function draw(){
+  $$('.opt', $('#ruler')).forEach(b => b.setAttribute('aria-pressed', b.dataset.v === st.ruler));
+  const ok = st.item.trim() && st.peak.trim() && st.empty.trim() && st.ruler;
+  $('#res').hidden = !ok; $('#cta').hidden = !ok; if (!ok) return;
+  $('#head').textContent = '「' + st.item.trim() + '」の中身';
+  $('#aPeak').textContent = st.peak.trim(); $('#aEmpty').textContent = st.empty.trim();
+  $('#read').textContent = READ[st.ruler];
+  $('#todo').textContent = st.re.trim()
+    ? '今週、15分だけ「' + st.re.trim() + '」。\n終わった直後に、0〜10で点数をつける。'
+    : '上の欄に、問い2の瞬間を15分で再現する方法を1つ書く。';
+}
+function save(){ store.set('d5', st); draw(); }
+['item', 'why', 'peak', 'empty', 're'].forEach(k => { $('#' + k).value = st[k]; $('#' + k).addEventListener('input', e => { st[k] = e.target.value; save(); }); });
+$('#ruler').addEventListener('click', e => { const b = e.target.closest('.opt'); if (!b) return; st.ruler = b.dataset.v; save(); });
+$('#copy').addEventListener('click', () => copyText(
+  '【4つの問いで分解】' + st.item.trim() + '\n1 始めた理由：' + st.why.trim() + '\n2 満たされた瞬間：' + st.peak.trim() + '\n3 空になった瞬間：' + st.empty.trim() +
+  '\n4 物差し：' + ({ me: '自分', half: '半々', other: '他人' })[st.ruler] + '\n今週の15分：' + st.re.trim(), $('#msg')));
+draw();
+</script>
+<footer>
+  <p>入力した内容は、この端末のブラウザの中にだけ保存されます。どこにも送信されません。</p>
+  <p>このページは、考えるきっかけのためのワークです。心理検査や診断、医療の助言ではありません。</p>
+  <p>作った人：いどむ（理学療法士）</p>
+  <p class="links"><a href="./">自由時間ログ（7日分）</a>　<a href="tokushoho.html">特定商取引法に基づく表記</a>　<a href="privacy.html">プライバシーポリシー</a></p>
+</footer>
+</div>
+</body>
+</html>
