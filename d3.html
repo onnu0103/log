@@ -300,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
   <p class="kicker">この罠を3行で</p>
   <ul class="sum3">
     <li><b>起きること</b><span>ゲームやSNSを、楽しくないのに何時間も続けてしまう。</span></li>
-    <li><b>理由</b><span>「欲しくなる」と「満たされる」は、脳の別の仕組みです。意志が弱いからではありません。</span></li>
+    <li><b>理由</b><span>「欲しくなる」と「満たされる」は、脳の別の働きです。意志が弱いからではありません。</span></li>
     <li><b>今夜できること</b><span>スマホを別の部屋に置いて、15分だけ何かを作る（メモ3行でもいい）。</span></li>
   </ul>
 </section>
@@ -321,16 +321,16 @@ document.addEventListener('DOMContentLoaded', () => {
 <text data-at="1" class="t" x="92" y="104">満たされる</text>
 <rect data-at="1" class="fp" x="92" y="112" width="206" height="18" rx="9"/>
 <rect data-at="3" class="f2 a-growx" x="92" y="112" width="52" height="18" rx="9"/>
-<text data-at="1" class="tm" x="298" y="92" text-anchor="end">脳の中では、別の仕組み</text>
+<text data-at="1" class="tm" x="298" y="92" text-anchor="end">脳の中では、別の働き</text>
 <text data-at="3" class="t a-up" x="160" y="170" text-anchor="middle">手は伸びるのに、満たされない</text>
 </svg><figcaption><span>※イメージ図（データではありません）</span><button type="button" class="link replay">もう一度見る</button></figcaption></figure>
-  <p>脳の中では、<b class="mk">「欲しくなる」と「満たされる」</b>が、別々の仕組みで動いています。</p><p>スマホやゲームは、「次は何が出るか」で、「欲しくなる」ほうだけを強く引っぱります。</p><p>だから、手は伸びるのに、終わっても満たされない、ということが起きます。</p>
+  <p>脳の中では、<b class="mk">「欲しくなる」と「満たされる」</b>が、別々に動いています。</p><p>スマホやゲームは、「次は何が出るか」で、「欲しくなる」ほうだけを強く引っぱります。</p><p>だから、手は伸びるのに、終わっても満たされない、ということが起きます。</p>
 </section>
 
 <section class="card rv">
   <h2>研究では、こうでした</h2>
   <ol class="steps"><li class="rv" style="--i:0">研究者は、ラットの脳で、ドーパミンがほとんど働かない状態を作りました。</li><li class="rv" style="--i:1">ラットは、自分からエサを取りに行かなくなりました。「欲しがる」ことが、なくなったのです。</li><li class="rv" style="--i:2">ところが、甘い水を口に入れると、「おいしい」ときの表情は、そのまま残っていました。</li></ol>
-  <div class="found"><b>わかったこと</b><p>「欲しがる仕組み」と「味わって満足する仕組み」は別もの。片方だけが強くなることがある。</p></div>
+  <div class="found"><b>わかったこと</b><p>「欲しがる働き」と「味わって満足する働き」は別もの。片方だけが強くなることがある。</p></div>
   <p class="src">出典：Berridge, K. C., &amp; Robinson, T. E. (1998). What is the role of dopamine in reward: hedonic impact, reward learning, or incentive salience? <i>Brain Research Reviews</i>, 28, 309–369.</p>
 </section>
 
@@ -377,9 +377,9 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 const PRE = [['動画・配信', 'p'], ['SNS', 'p'], ['ゲーム', 'p'], ['マンガ・読書', 'p'], ['ゴロゴロ・二度寝', 'p'], ['買い物', 'p'],
   ['運動・散歩', 'a'], ['料理', 'a'], ['つくる（絵・文章・音楽・工作）', 'a'], ['練習（楽器・語学・勉強）', 'a'], ['人と会う・話す', 'a']];
-const TO = ['散歩', '料理', '絵', '文章', '楽器', '工作', '筋トレ', '勉強'];
+const TO = ['本当はしたかったこと', '散歩', '料理', '絵', '文章', '楽器', '工作', '筋トレ', '勉強'];
 const KN = { a: '自分から', p: '受け身' };
-let st = store.get('v2w3', null) || { rows: PRE.map(([n, k]) => ({ n, k, h: 0 })), to: '散歩' };
+let st = store.get('v2w3', null) || { rows: PRE.map(([n, k]) => ({ n, k, h: 0 })), to: '本当はしたかったこと' };
 const fmt = h => (h % 1 ? h.toFixed(1) : String(h)) + '時間';
 
 function drawRows(){
@@ -398,7 +398,7 @@ function drawRes(){
   $('#sum').textContent = '自由時間' + fmt(total) + 'のうち、自分から動いた時間が' + fmt(act) + '、受け身の時間が' + fmt(total - act) + 'でした。';
   $('#read').textContent = pct < 20 ? 'ほとんどが、受け取るだけの時間でした。休日が終わって何も残らない感じは、ここから来ているかもしれません。全部を変える必要はありません。15分だけ入れかえます。'
     : pct < 50 ? '受け取るだけの時間のほうが多めです。全部を変える必要はありません。15分だけ入れかえます。'
-    : '半分以上が、自分から動いた時間でした。それでも満たされないなら、原因は時間の量ではなさそうです。1日目の「夢中になれる3つの条件」で、中身のほうをチェックしてみてください。';
+    : '半分以上が、自分から動いた時間でした。それでも満たされないなら、原因は時間の量ではなさそうです。1日目のワーク「本当はしたかったことのかけら」で、中身のほうを見直してみてください。';
   const from = st.rows.filter(r => r.k === 'p' && r.h > 0).sort((x, y) => y.h - x.h)[0];
   $('#todo').textContent = from
     ? '来週末は、「' + from.n + '」の' + fmt(from.h) + 'のうち15分だけを、' + st.to + 'に入れかえる。\n終わった直後に、0〜10で点数をつける。'
